@@ -9,7 +9,12 @@
     ' such as the username, display name, etc.
 
     Private Sub OK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK.Click
-        Me.Close()
+        results.Show()
+        Me.Hide()
+
+
+
+
     End Sub
 
     Private Sub Cancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cancel.Click
@@ -17,4 +22,5 @@
     End Sub
 
  
+  
 End Class
