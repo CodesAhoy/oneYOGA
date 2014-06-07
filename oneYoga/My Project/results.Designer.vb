@@ -56,7 +56,6 @@ Partial Class results
         Dim FriendExplainLabel As System.Windows.Forms.Label
         Dim DateRegisteredLabel As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(results))
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.OYmembers = New oneYoga.OYmembers()
         Me.MembersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MembersTableAdapter = New oneYoga.OYmembersTableAdapters.membersTableAdapter()
@@ -73,6 +72,7 @@ Partial Class results
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.EditButton = New System.Windows.Forms.ToolStripButton()
         Me.MembersBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.MemberIDTextBox = New System.Windows.Forms.TextBox()
         Me.SurnameTextBox = New System.Windows.Forms.TextBox()
@@ -451,15 +451,6 @@ Partial Class results
         DateRegisteredLabel.TabIndex = 79
         DateRegisteredLabel.Text = "Date Registered:"
         '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(34, -88)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Close"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'OYmembers
         '
         Me.OYmembers.DataSetName = "OYmembers"
@@ -487,7 +478,7 @@ Partial Class results
         Me.MembersBindingNavigator.BindingSource = Me.MembersBindingSource
         Me.MembersBindingNavigator.CountItem = Me.BindingNavigatorCountItem
         Me.MembersBindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
-        Me.MembersBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.MembersBindingNavigatorSaveItem})
+        Me.MembersBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.EditButton, Me.BindingNavigatorDeleteItem, Me.MembersBindingNavigatorSaveItem})
         Me.MembersBindingNavigator.Location = New System.Drawing.Point(0, 0)
         Me.MembersBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
         Me.MembersBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
@@ -584,6 +575,15 @@ Partial Class results
         Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
         Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
         '
+        'EditButton
+        '
+        Me.EditButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.EditButton.Image = CType(resources.GetObject("EditButton.Image"), System.Drawing.Image)
+        Me.EditButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.EditButton.Name = "EditButton"
+        Me.EditButton.Size = New System.Drawing.Size(31, 22)
+        Me.EditButton.Text = "Edit"
+        '
         'MembersBindingNavigatorSaveItem
         '
         Me.MembersBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -660,6 +660,7 @@ Partial Class results
         'BirthdateDateTimePicker
         '
         Me.BirthdateDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.MembersBindingSource, "birthdate", True))
+        Me.BirthdateDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MembersBindingSource, "birthdate", True))
         Me.BirthdateDateTimePicker.Location = New System.Drawing.Point(80, 207)
         Me.BirthdateDateTimePicker.Name = "BirthdateDateTimePicker"
         Me.BirthdateDateTimePicker.Size = New System.Drawing.Size(200, 20)
@@ -1130,7 +1131,6 @@ Partial Class results
         Me.Controls.Add(DateRegisteredLabel)
         Me.Controls.Add(Me.DateRegisteredDateTimePicker)
         Me.Controls.Add(Me.MembersBindingNavigator)
-        Me.Controls.Add(Me.Button1)
         Me.Name = "results"
         Me.Text = "Registration Testing"
         CType(Me.OYmembers, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1142,7 +1142,6 @@ Partial Class results
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents OYmembers As oneYoga.OYmembers
     Friend WithEvents MembersBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents MembersTableAdapter As oneYoga.OYmembersTableAdapters.membersTableAdapter
@@ -1210,4 +1209,5 @@ Partial Class results
     Friend WithEvents Close_button As System.Windows.Forms.Button
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
+    Friend WithEvents EditButton As System.Windows.Forms.ToolStripButton
 End Class
