@@ -99,6 +99,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
     </Compile>
+    <Compile Include="My Project\Layout.Designer.vb">
+      <DependentUpon>Layout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Layout.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\loginForm.Designer.vb">
       <DependentUpon>loginForm.vb</DependentUpon>
     </Compile>
@@ -134,6 +140,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="My Project\Layout.resx">
+      <DependentUpon>Layout.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\loginForm.resx">
       <DependentUpon>loginForm.vb</DependentUpon>
     </EmbeddedResource>
