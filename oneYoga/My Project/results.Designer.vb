@@ -1132,6 +1132,7 @@ Partial Class results
         Me.Controls.Add(Me.DateRegisteredDateTimePicker)
         Me.Controls.Add(Me.MembersBindingNavigator)
         Me.Name = "results"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Registration Testing"
         CType(Me.OYmembers, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MembersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
