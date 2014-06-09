@@ -469,6 +469,7 @@ Partial Class results
         '
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.membersTableAdapter = Me.MembersTableAdapter
+        Me.TableAdapterManager.TableTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = oneYoga.OYmembersTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.usersTableAdapter = Nothing
         '

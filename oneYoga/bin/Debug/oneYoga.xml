@@ -31,6 +31,10 @@ Represents the strongly named DataTable class.
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
+</member><member name="T:oneYoga.OYmembers.TableDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
 </member><member name="T:oneYoga.OYmembers.membersRow">
 	<summary>
 Represents strongly named DataRow class.
@@ -39,11 +43,19 @@ Represents strongly named DataRow class.
 	<summary>
 Represents strongly named DataRow class.
 </summary>
+</member><member name="T:oneYoga.OYmembers.TableRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
 </member><member name="T:oneYoga.OYmembers.membersRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
 </member><member name="T:oneYoga.OYmembers.usersRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:oneYoga.OYmembers.TableRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
@@ -56,6 +68,10 @@ Represents a strongly typed in-memory cache of data.
 Represents the connection and commands used to retrieve and save data.
 </summary>
 </member><member name="T:oneYoga.OYmembersTableAdapters.usersTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:oneYoga.OYmembersTableAdapters.TableTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>

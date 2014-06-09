@@ -12,7 +12,7 @@ Public Class loginForm
     Dim cmd As SqlCommand
     Dim myDA As SqlDataAdapter
     Dim myDataSet As DataSet
-    Dim con As SqlConnection = New SqlConnection("Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\user\Source\Repos\oneYOGA\oneYoga\bin\Debug\Database1.mdf;Integrated Security=True;Connect Timeout=30")
+    Dim con As SqlConnection = New SqlConnection("Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\acer\Documents\GitHub\oneYOGA\oneYoga\Database1.mdf;Integrated Security=True;Connect Timeout=30")
 
     Private Sub OK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK.Click
 
