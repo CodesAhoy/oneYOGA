@@ -46,6 +46,7 @@
  
     Private Sub Close_button_Click(sender As Object, e As EventArgs) Handles Close_button.Click
         loginForm.Show()
+        Sampl.Show()
         Me.Close()
     End Sub
 
