@@ -27,11 +27,11 @@ oneYoga
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:oneYoga.OYmembers.usersDataTable">
+</member><member name="T:oneYoga.OYmembers.otherYogaMedicationDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:oneYoga.OYmembers.otherYogaMedicationDataTable">
+</member><member name="T:oneYoga.OYmembers.usersDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
@@ -39,11 +39,11 @@ Represents the strongly named DataTable class.
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:oneYoga.OYmembers.usersRow">
+</member><member name="T:oneYoga.OYmembers.otherYogaMedicationRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:oneYoga.OYmembers.otherYogaMedicationRow">
+</member><member name="T:oneYoga.OYmembers.usersRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
@@ -51,11 +51,11 @@ Represents strongly named DataRow class.
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:oneYoga.OYmembers.usersRowChangeEvent">
+</member><member name="T:oneYoga.OYmembers.otherYogaMedicationRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:oneYoga.OYmembers.otherYogaMedicationRowChangeEvent">
+</member><member name="T:oneYoga.OYmembers.usersRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
@@ -67,11 +67,11 @@ Represents a strongly typed in-memory cache of data.
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:oneYoga.OYmembersTableAdapters.usersTableAdapter">
+</member><member name="T:oneYoga.OYmembersTableAdapters.otherYogaMedicationTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:oneYoga.OYmembersTableAdapters.otherYogaMedicationTableAdapter">
+</member><member name="T:oneYoga.OYmembersTableAdapters.usersTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>

@@ -5,7 +5,7 @@
 
     Private Sub results_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
 
-        mainMenu.Enabled = True
+
 
     End Sub
 
@@ -26,7 +26,7 @@
 
     Private Sub Close_button_Click(sender As Object, e As EventArgs) Handles Close_button.Click
 
-        mainMenu.Enabled = True
+
         Me.Close()
     End Sub
 End Class

@@ -31,17 +31,17 @@ Partial Class results
         Me.MembersTableAdapter = New oneYoga.OYmembersTableAdapters.membersTableAdapter()
         Me.TableAdapterManager = New oneYoga.OYmembersTableAdapters.TableAdapterManager()
         Me.MembersBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.MembersBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.MembersDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -92,7 +92,7 @@ Partial Class results
         '
         'Close_button
         '
-        Me.Close_button.Location = New System.Drawing.Point(660, 699)
+        Me.Close_button.Location = New System.Drawing.Point(690, 492)
         Me.Close_button.Name = "Close_button"
         Me.Close_button.Size = New System.Drawing.Size(223, 23)
         Me.Close_button.TabIndex = 91
@@ -101,7 +101,7 @@ Partial Class results
         '
         'StatusStrip1
         '
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 728)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 540)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Size = New System.Drawing.Size(942, 22)
         Me.StatusStrip1.TabIndex = 93
@@ -147,6 +147,33 @@ Partial Class results
         Me.MembersBindingNavigator.TabIndex = 94
         Me.MembersBindingNavigator.Text = "BindingNavigator1"
         '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Enabled = False
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
+        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Enabled = False
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Delete"
+        '
         'BindingNavigatorMoveFirstItem
         '
         Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -179,16 +206,9 @@ Partial Class results
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
         Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorMoveNextItem
@@ -211,28 +231,8 @@ Partial Class results
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
         Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Enabled = False
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Add new"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Enabled = False
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorDeleteItem.Text = "Delete"
         '
         'MembersBindingNavigatorSaveItem
         '
@@ -251,11 +251,11 @@ Partial Class results
         Me.MembersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.MembersDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn11, Me.DataGridViewTextBoxColumn12, Me.DataGridViewTextBoxColumn13, Me.DataGridViewTextBoxColumn14, Me.DataGridViewTextBoxColumn15, Me.DataGridViewTextBoxColumn16, Me.DataGridViewTextBoxColumn17, Me.DataGridViewTextBoxColumn18, Me.DataGridViewCheckBoxColumn1, Me.DataGridViewCheckBoxColumn2, Me.DataGridViewCheckBoxColumn3, Me.DataGridViewCheckBoxColumn4, Me.DataGridViewCheckBoxColumn5, Me.DataGridViewCheckBoxColumn6, Me.DataGridViewTextBoxColumn19, Me.DataGridViewCheckBoxColumn7, Me.DataGridViewTextBoxColumn20, Me.DataGridViewTextBoxColumn21, Me.DataGridViewCheckBoxColumn8, Me.DataGridViewTextBoxColumn22, Me.DataGridViewCheckBoxColumn9, Me.DataGridViewCheckBoxColumn10, Me.DataGridViewCheckBoxColumn11, Me.DataGridViewCheckBoxColumn12, Me.DataGridViewCheckBoxColumn13, Me.DataGridViewTextBoxColumn23, Me.DataGridViewTextBoxColumn24, Me.DataGridViewTextBoxColumn25, Me.DataGridViewTextBoxColumn26})
         Me.MembersDataGridView.DataSource = Me.MembersBindingSource
-        Me.MembersDataGridView.Location = New System.Drawing.Point(28, 53)
+        Me.MembersDataGridView.Location = New System.Drawing.Point(30, 53)
         Me.MembersDataGridView.MultiSelect = False
         Me.MembersDataGridView.Name = "MembersDataGridView"
         Me.MembersDataGridView.ReadOnly = True
-        Me.MembersDataGridView.Size = New System.Drawing.Size(881, 626)
+        Me.MembersDataGridView.Size = New System.Drawing.Size(881, 433)
         Me.MembersDataGridView.TabIndex = 94
         '
         'DataGridViewTextBoxColumn1
@@ -270,242 +270,280 @@ Partial Class results
         Me.DataGridViewTextBoxColumn2.DataPropertyName = "surname"
         Me.DataGridViewTextBoxColumn2.HeaderText = "surname"
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
         '
         'DataGridViewTextBoxColumn3
         '
         Me.DataGridViewTextBoxColumn3.DataPropertyName = "firstname"
         Me.DataGridViewTextBoxColumn3.HeaderText = "firstname"
         Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
         '
         'DataGridViewTextBoxColumn4
         '
         Me.DataGridViewTextBoxColumn4.DataPropertyName = "MI"
         Me.DataGridViewTextBoxColumn4.HeaderText = "MI"
         Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.ReadOnly = True
         '
         'DataGridViewTextBoxColumn5
         '
         Me.DataGridViewTextBoxColumn5.DataPropertyName = "nickname"
         Me.DataGridViewTextBoxColumn5.HeaderText = "nickname"
         Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        Me.DataGridViewTextBoxColumn5.ReadOnly = True
         '
         'DataGridViewTextBoxColumn6
         '
         Me.DataGridViewTextBoxColumn6.DataPropertyName = "homeAddr"
         Me.DataGridViewTextBoxColumn6.HeaderText = "homeAddr"
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        Me.DataGridViewTextBoxColumn6.ReadOnly = True
         '
         'DataGridViewTextBoxColumn7
         '
         Me.DataGridViewTextBoxColumn7.DataPropertyName = "zipcode"
         Me.DataGridViewTextBoxColumn7.HeaderText = "zipcode"
         Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        Me.DataGridViewTextBoxColumn7.ReadOnly = True
         '
         'DataGridViewTextBoxColumn8
         '
         Me.DataGridViewTextBoxColumn8.DataPropertyName = "officeAddr"
         Me.DataGridViewTextBoxColumn8.HeaderText = "officeAddr"
         Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        Me.DataGridViewTextBoxColumn8.ReadOnly = True
         '
         'DataGridViewTextBoxColumn9
         '
         Me.DataGridViewTextBoxColumn9.DataPropertyName = "birthdate"
         Me.DataGridViewTextBoxColumn9.HeaderText = "birthdate"
         Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
+        Me.DataGridViewTextBoxColumn9.ReadOnly = True
         '
         'DataGridViewTextBoxColumn10
         '
         Me.DataGridViewTextBoxColumn10.DataPropertyName = "civilStatus"
         Me.DataGridViewTextBoxColumn10.HeaderText = "civilStatus"
         Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
+        Me.DataGridViewTextBoxColumn10.ReadOnly = True
         '
         'DataGridViewTextBoxColumn11
         '
         Me.DataGridViewTextBoxColumn11.DataPropertyName = "sex"
         Me.DataGridViewTextBoxColumn11.HeaderText = "sex"
         Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
+        Me.DataGridViewTextBoxColumn11.ReadOnly = True
         '
         'DataGridViewTextBoxColumn12
         '
         Me.DataGridViewTextBoxColumn12.DataPropertyName = "mobileNo"
         Me.DataGridViewTextBoxColumn12.HeaderText = "mobileNo"
         Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
+        Me.DataGridViewTextBoxColumn12.ReadOnly = True
         '
         'DataGridViewTextBoxColumn13
         '
         Me.DataGridViewTextBoxColumn13.DataPropertyName = "otherContact"
         Me.DataGridViewTextBoxColumn13.HeaderText = "otherContact"
         Me.DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13"
+        Me.DataGridViewTextBoxColumn13.ReadOnly = True
         '
         'DataGridViewTextBoxColumn14
         '
         Me.DataGridViewTextBoxColumn14.DataPropertyName = "email"
         Me.DataGridViewTextBoxColumn14.HeaderText = "email"
         Me.DataGridViewTextBoxColumn14.Name = "DataGridViewTextBoxColumn14"
+        Me.DataGridViewTextBoxColumn14.ReadOnly = True
         '
         'DataGridViewTextBoxColumn15
         '
         Me.DataGridViewTextBoxColumn15.DataPropertyName = "contactPerson"
         Me.DataGridViewTextBoxColumn15.HeaderText = "contactPerson"
         Me.DataGridViewTextBoxColumn15.Name = "DataGridViewTextBoxColumn15"
+        Me.DataGridViewTextBoxColumn15.ReadOnly = True
         '
         'DataGridViewTextBoxColumn16
         '
         Me.DataGridViewTextBoxColumn16.DataPropertyName = "contactPersonNo"
         Me.DataGridViewTextBoxColumn16.HeaderText = "contactPersonNo"
         Me.DataGridViewTextBoxColumn16.Name = "DataGridViewTextBoxColumn16"
+        Me.DataGridViewTextBoxColumn16.ReadOnly = True
         '
         'DataGridViewTextBoxColumn17
         '
         Me.DataGridViewTextBoxColumn17.DataPropertyName = "contactPersonRelationship"
         Me.DataGridViewTextBoxColumn17.HeaderText = "contactPersonRelationship"
         Me.DataGridViewTextBoxColumn17.Name = "DataGridViewTextBoxColumn17"
+        Me.DataGridViewTextBoxColumn17.ReadOnly = True
         '
         'DataGridViewTextBoxColumn18
         '
         Me.DataGridViewTextBoxColumn18.DataPropertyName = "contactPersonAddr"
         Me.DataGridViewTextBoxColumn18.HeaderText = "contactPersonAddr"
         Me.DataGridViewTextBoxColumn18.Name = "DataGridViewTextBoxColumn18"
+        Me.DataGridViewTextBoxColumn18.ReadOnly = True
         '
         'DataGridViewCheckBoxColumn1
         '
         Me.DataGridViewCheckBoxColumn1.DataPropertyName = "asthma"
         Me.DataGridViewCheckBoxColumn1.HeaderText = "asthma"
         Me.DataGridViewCheckBoxColumn1.Name = "DataGridViewCheckBoxColumn1"
+        Me.DataGridViewCheckBoxColumn1.ReadOnly = True
         '
         'DataGridViewCheckBoxColumn2
         '
         Me.DataGridViewCheckBoxColumn2.DataPropertyName = "epilepsy"
         Me.DataGridViewCheckBoxColumn2.HeaderText = "epilepsy"
         Me.DataGridViewCheckBoxColumn2.Name = "DataGridViewCheckBoxColumn2"
+        Me.DataGridViewCheckBoxColumn2.ReadOnly = True
         '
         'DataGridViewCheckBoxColumn3
         '
         Me.DataGridViewCheckBoxColumn3.DataPropertyName = "highBlood"
         Me.DataGridViewCheckBoxColumn3.HeaderText = "highBlood"
         Me.DataGridViewCheckBoxColumn3.Name = "DataGridViewCheckBoxColumn3"
+        Me.DataGridViewCheckBoxColumn3.ReadOnly = True
         '
         'DataGridViewCheckBoxColumn4
         '
         Me.DataGridViewCheckBoxColumn4.DataPropertyName = "heartProblem"
         Me.DataGridViewCheckBoxColumn4.HeaderText = "heartProblem"
         Me.DataGridViewCheckBoxColumn4.Name = "DataGridViewCheckBoxColumn4"
+        Me.DataGridViewCheckBoxColumn4.ReadOnly = True
         '
         'DataGridViewCheckBoxColumn5
         '
         Me.DataGridViewCheckBoxColumn5.DataPropertyName = "backpain"
         Me.DataGridViewCheckBoxColumn5.HeaderText = "backpain"
         Me.DataGridViewCheckBoxColumn5.Name = "DataGridViewCheckBoxColumn5"
+        Me.DataGridViewCheckBoxColumn5.ReadOnly = True
         '
         'DataGridViewCheckBoxColumn6
         '
         Me.DataGridViewCheckBoxColumn6.DataPropertyName = "pregnancy"
         Me.DataGridViewCheckBoxColumn6.HeaderText = "pregnancy"
         Me.DataGridViewCheckBoxColumn6.Name = "DataGridViewCheckBoxColumn6"
+        Me.DataGridViewCheckBoxColumn6.ReadOnly = True
         '
         'DataGridViewTextBoxColumn19
         '
         Me.DataGridViewTextBoxColumn19.DataPropertyName = "otherHealthCondition"
         Me.DataGridViewTextBoxColumn19.HeaderText = "otherHealthCondition"
         Me.DataGridViewTextBoxColumn19.Name = "DataGridViewTextBoxColumn19"
+        Me.DataGridViewTextBoxColumn19.ReadOnly = True
         '
         'DataGridViewCheckBoxColumn7
         '
         Me.DataGridViewCheckBoxColumn7.DataPropertyName = "prescribedMedication"
         Me.DataGridViewCheckBoxColumn7.HeaderText = "prescribedMedication"
         Me.DataGridViewCheckBoxColumn7.Name = "DataGridViewCheckBoxColumn7"
+        Me.DataGridViewCheckBoxColumn7.ReadOnly = True
         '
         'DataGridViewTextBoxColumn20
         '
         Me.DataGridViewTextBoxColumn20.DataPropertyName = "prescribedMedicationExplain"
         Me.DataGridViewTextBoxColumn20.HeaderText = "prescribedMedicationExplain"
         Me.DataGridViewTextBoxColumn20.Name = "DataGridViewTextBoxColumn20"
+        Me.DataGridViewTextBoxColumn20.ReadOnly = True
         '
         'DataGridViewTextBoxColumn21
         '
         Me.DataGridViewTextBoxColumn21.DataPropertyName = "physicianOrHospitalCare"
         Me.DataGridViewTextBoxColumn21.HeaderText = "physicianOrHospitalCare"
         Me.DataGridViewTextBoxColumn21.Name = "DataGridViewTextBoxColumn21"
+        Me.DataGridViewTextBoxColumn21.ReadOnly = True
         '
         'DataGridViewCheckBoxColumn8
         '
         Me.DataGridViewCheckBoxColumn8.DataPropertyName = "surgery"
         Me.DataGridViewCheckBoxColumn8.HeaderText = "surgery"
         Me.DataGridViewCheckBoxColumn8.Name = "DataGridViewCheckBoxColumn8"
+        Me.DataGridViewCheckBoxColumn8.ReadOnly = True
         '
         'DataGridViewTextBoxColumn22
         '
         Me.DataGridViewTextBoxColumn22.DataPropertyName = "surgeryExplain"
         Me.DataGridViewTextBoxColumn22.HeaderText = "surgeryExplain"
         Me.DataGridViewTextBoxColumn22.Name = "DataGridViewTextBoxColumn22"
+        Me.DataGridViewTextBoxColumn22.ReadOnly = True
         '
         'DataGridViewCheckBoxColumn9
         '
         Me.DataGridViewCheckBoxColumn9.DataPropertyName = "OYinternet"
         Me.DataGridViewCheckBoxColumn9.HeaderText = "OYinternet"
         Me.DataGridViewCheckBoxColumn9.Name = "DataGridViewCheckBoxColumn9"
+        Me.DataGridViewCheckBoxColumn9.ReadOnly = True
         '
         'DataGridViewCheckBoxColumn10
         '
         Me.DataGridViewCheckBoxColumn10.DataPropertyName = "OYFlyer"
         Me.DataGridViewCheckBoxColumn10.HeaderText = "OYFlyer"
         Me.DataGridViewCheckBoxColumn10.Name = "DataGridViewCheckBoxColumn10"
+        Me.DataGridViewCheckBoxColumn10.ReadOnly = True
         '
         'DataGridViewCheckBoxColumn11
         '
         Me.DataGridViewCheckBoxColumn11.DataPropertyName = "OYNewspaper"
         Me.DataGridViewCheckBoxColumn11.HeaderText = "OYNewspaper"
         Me.DataGridViewCheckBoxColumn11.Name = "DataGridViewCheckBoxColumn11"
+        Me.DataGridViewCheckBoxColumn11.ReadOnly = True
         '
         'DataGridViewCheckBoxColumn12
         '
         Me.DataGridViewCheckBoxColumn12.DataPropertyName = "OYFriend"
         Me.DataGridViewCheckBoxColumn12.HeaderText = "OYFriend"
         Me.DataGridViewCheckBoxColumn12.Name = "DataGridViewCheckBoxColumn12"
+        Me.DataGridViewCheckBoxColumn12.ReadOnly = True
         '
         'DataGridViewCheckBoxColumn13
         '
         Me.DataGridViewCheckBoxColumn13.DataPropertyName = "OYBrochure"
         Me.DataGridViewCheckBoxColumn13.HeaderText = "OYBrochure"
         Me.DataGridViewCheckBoxColumn13.Name = "DataGridViewCheckBoxColumn13"
+        Me.DataGridViewCheckBoxColumn13.ReadOnly = True
         '
         'DataGridViewTextBoxColumn23
         '
         Me.DataGridViewTextBoxColumn23.DataPropertyName = "OYOthers"
         Me.DataGridViewTextBoxColumn23.HeaderText = "OYOthers"
         Me.DataGridViewTextBoxColumn23.Name = "DataGridViewTextBoxColumn23"
+        Me.DataGridViewTextBoxColumn23.ReadOnly = True
         '
         'DataGridViewTextBoxColumn24
         '
         Me.DataGridViewTextBoxColumn24.DataPropertyName = "newspaperExplain"
         Me.DataGridViewTextBoxColumn24.HeaderText = "newspaperExplain"
         Me.DataGridViewTextBoxColumn24.Name = "DataGridViewTextBoxColumn24"
+        Me.DataGridViewTextBoxColumn24.ReadOnly = True
         '
         'DataGridViewTextBoxColumn25
         '
         Me.DataGridViewTextBoxColumn25.DataPropertyName = "friendExplain"
         Me.DataGridViewTextBoxColumn25.HeaderText = "friendExplain"
         Me.DataGridViewTextBoxColumn25.Name = "DataGridViewTextBoxColumn25"
+        Me.DataGridViewTextBoxColumn25.ReadOnly = True
         '
         'DataGridViewTextBoxColumn26
         '
         Me.DataGridViewTextBoxColumn26.DataPropertyName = "dateRegistered"
         Me.DataGridViewTextBoxColumn26.HeaderText = "dateRegistered"
         Me.DataGridViewTextBoxColumn26.Name = "DataGridViewTextBoxColumn26"
+        Me.DataGridViewTextBoxColumn26.ReadOnly = True
         '
         'results
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(942, 750)
+        Me.ClientSize = New System.Drawing.Size(942, 562)
         Me.Controls.Add(Me.MembersDataGridView)
         Me.Controls.Add(Me.MembersBindingNavigator)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.Close_button)
         Me.Name = "results"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Viewing Members Database"
+        Me.Text = "One Yoga - Viewing Members Database"
         CType(Me.OYmembers, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MembersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MembersBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()

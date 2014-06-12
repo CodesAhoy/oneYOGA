@@ -10,13 +10,11 @@ C:\Users\user\Source\Repos\oneYOGA\oneYoga\bin\Debug\oneYoga.pdb
 C:\Users\user\Source\Repos\oneYOGA\oneYoga\bin\Debug\oneYoga.xml
 C:\Users\user\Source\Repos\oneYOGA\oneYoga\obj\Debug\oneYoga.vbprojResolveAssemblyReference.cache
 C:\Users\user\Source\Repos\oneYOGA\oneYoga\obj\Debug\oneYoga.loginForm.resources
-C:\Users\user\Source\Repos\oneYOGA\oneYoga\obj\Debug\oneYoga.login_Form.resources
 C:\Users\user\Source\Repos\oneYOGA\oneYoga\obj\Debug\oneYoga.Resources.resources
 C:\Users\user\Source\Repos\oneYOGA\oneYoga\obj\Debug\oneYoga.results.resources
 C:\Users\user\Source\Repos\oneYOGA\oneYoga\obj\Debug\oneYoga.vbproj.GenerateResource.Cache
 C:\Users\user\Source\Repos\oneYOGA\oneYoga\obj\Debug\oneYoga.exe
 C:\Users\user\Source\Repos\oneYOGA\oneYoga\obj\Debug\oneYoga.xml
 C:\Users\user\Source\Repos\oneYOGA\oneYoga\obj\Debug\oneYoga.pdb
-C:\Users\user\Source\Repos\oneYoga\oneYoga\obj\Debug\oneYoga.otherYogaMedications.resources
 C:\Users\user\Source\Repos\oneYoga\oneYoga\obj\Debug\oneYoga.mainMenu.resources
 C:\Users\user\Source\Repos\oneYoga\oneYoga\obj\Debug\oneYoga.membersRegistration.resources
