@@ -98,7 +98,7 @@ Partial Class loginForm
         Me.Cancel.Name = "Cancel"
         Me.Cancel.Size = New System.Drawing.Size(94, 23)
         Me.Cancel.TabIndex = 5
-        Me.Cancel.Text = "&Cancel"
+        Me.Cancel.Text = "&Exit"
         '
         'loginForm
         '

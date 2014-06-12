@@ -23,7 +23,8 @@ Public Class loginForm
             sdr.Close()
             UsernameTextBox.Clear()
             PasswordTextBox.Clear()
-            results.Show()
+            'results.Show()
+            mainMenu.Show()
             Me.Hide()
         Else
             MsgBox("Invalid username or password!")
@@ -32,14 +33,7 @@ Public Class loginForm
         'While sdr.Read = True
         '   MsgBox(sdr.Item("name") & " " & sdr.Item("password") & sdr.Item("name"))
         'End While
-
         'MsgBox(UsernameTextBox.Text)
-
-        
-
-
-
-
     End Sub
 
     Private Sub Cancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cancel.Click

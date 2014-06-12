@@ -75,6 +75,17 @@ Namespace My
                 Return CType(Me("Database1ConnectionString"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\sampleData.mdf;Integ"& _ 
+            "rated Security=True;Connect Timeout=30")>  _
+        Public ReadOnly Property sampleDataConnectionString() As String
+            Get
+                Return CType(Me("sampleDataConnectionString"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 
