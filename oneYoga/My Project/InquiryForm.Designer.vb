@@ -63,6 +63,7 @@ Partial Class InquiryForm
         Me.EmailAddressTextBox = New System.Windows.Forms.TextBox()
         Me.ReceivedByComboBox = New System.Windows.Forms.ComboBox()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         DateLabel = New System.Windows.Forms.Label()
         TimeLabel = New System.Windows.Forms.Label()
         LastNameLabel = New System.Windows.Forms.Label()
@@ -400,11 +401,21 @@ Partial Class InquiryForm
         Me.Label5.TabIndex = 93
         Me.Label5.Text = "INQUIRY FORM"
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(457, 338)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(228, 27)
+        Me.Button1.TabIndex = 94
+        Me.Button1.Text = "Don't Give Up On Katrina"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'InquiryForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(719, 376)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(DateLabel)
         Me.Controls.Add(Me.DateDateTimePicker)
@@ -467,4 +478,5 @@ Partial Class InquiryForm
     Friend WithEvents ReceivedByComboBox As System.Windows.Forms.ComboBox
     Friend WithEvents EditButton As System.Windows.Forms.ToolStripButton
     Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class
