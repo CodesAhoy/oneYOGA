@@ -33,9 +33,6 @@
         MsgBox("Feature Coming Soon!", 0, "One Yoga")
     End Sub
 
-    Private Sub UsersButton_Click(sender As Object, e As EventArgs) Handles UsersButton.Click
-        MsgBox("Feature Coming Soon!", 0, "One Yoga")
-    End Sub
 
     Private Sub mainMenu_Activated(sender As Object, e As EventArgs) Handles Me.Activated
         Me.nameLabel.Text = "Welcome, " & userName
@@ -46,5 +43,9 @@
     Private Sub mainMenu_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
         loginForm.Show()
         loginForm.UsernameTextBox.Focus()
+    End Sub
+
+    Private Sub InquiryButton_Click(sender As Object, e As EventArgs) Handles InquiryButton.Click
+        InquiryForm.Show()
     End Sub
 End Class
