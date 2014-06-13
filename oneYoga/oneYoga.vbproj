@@ -99,6 +99,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
     </Compile>
+    <Compile Include="My Project\InquiryForm.Designer.vb">
+      <DependentUpon>InquiryForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\InquiryForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\Layout.Designer.vb">
       <DependentUpon>Layout.vb</DependentUpon>
     </Compile>
@@ -133,6 +139,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="OYinquiry.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OYinquiry.xsd</DependentUpon>
+    </Compile>
     <Compile Include="OYmembers.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -140,6 +151,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="My Project\InquiryForm.resx">
+      <DependentUpon>InquiryForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Layout.resx">
       <DependentUpon>Layout.vb</DependentUpon>
     </EmbeddedResource>
@@ -203,6 +217,17 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
+    <None Include="OYinquiry.xsc">
+      <DependentUpon>OYinquiry.xsd</DependentUpon>
+    </None>
+    <None Include="OYinquiry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OYinquiry.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OYinquiry.xss">
+      <DependentUpon>OYinquiry.xsd</DependentUpon>
+    </None>
     <None Include="OYmembers.xsc">
       <DependentUpon>OYmembers.xsd</DependentUpon>
     </None>
