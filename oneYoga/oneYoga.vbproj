@@ -94,6 +94,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CodeFile1.vb" />
+    <Compile Include="mainMenu.Designer.vb">
+      <DependentUpon>mainMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="mainMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="membersRegistration.Designer.vb">
+      <DependentUpon>membersRegistration.vb</DependentUpon>
+    </Compile>
+    <Compile Include="membersRegistration.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -115,12 +127,6 @@
       <DependentUpon>loginForm.vb</DependentUpon>
     </Compile>
     <Compile Include="My Project\loginForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="My Project\login_Form.Designer.vb">
-      <DependentUpon>login_Form.vb</DependentUpon>
-    </Compile>
-    <Compile Include="My Project\login_Form.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
@@ -156,12 +162,14 @@
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Layout.resx">
       <DependentUpon>Layout.vb</DependentUpon>
+    <EmbeddedResource Include="mainMenu.resx">
+      <DependentUpon>mainMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="membersRegistration.resx">
+      <DependentUpon>membersRegistration.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\loginForm.resx">
       <DependentUpon>loginForm.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="My Project\login_Form.resx">
-      <DependentUpon>login_Form.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

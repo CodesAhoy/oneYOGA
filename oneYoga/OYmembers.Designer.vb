@@ -27,6 +27,8 @@ Partial Public Class OYmembers
     
     Private tablemembers As membersDataTable
     
+    Private tableotherYogaMedication As otherYogaMedicationDataTable
+    
     Private tableusers As usersDataTable
     
     Private _schemaSerializationMode As Global.System.Data.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
@@ -61,6 +63,9 @@ Partial Public Class OYmembers
             If (Not (ds.Tables("members")) Is Nothing) Then
                 MyBase.Tables.Add(New membersDataTable(ds.Tables("members")))
             End If
+            If (Not (ds.Tables("otherYogaMedication")) Is Nothing) Then
+                MyBase.Tables.Add(New otherYogaMedicationDataTable(ds.Tables("otherYogaMedication")))
+            End If
             If (Not (ds.Tables("users")) Is Nothing) Then
                 MyBase.Tables.Add(New usersDataTable(ds.Tables("users")))
             End If
@@ -88,6 +93,16 @@ Partial Public Class OYmembers
     Public ReadOnly Property members() As membersDataTable
         Get
             Return Me.tablemembers
+        End Get
+    End Property
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+     Global.System.ComponentModel.Browsable(false),  _
+     Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
+    Public ReadOnly Property otherYogaMedication() As otherYogaMedicationDataTable
+        Get
+            Return Me.tableotherYogaMedication
         End Get
     End Property
     
@@ -171,6 +186,9 @@ Partial Public Class OYmembers
             If (Not (ds.Tables("members")) Is Nothing) Then
                 MyBase.Tables.Add(New membersDataTable(ds.Tables("members")))
             End If
+            If (Not (ds.Tables("otherYogaMedication")) Is Nothing) Then
+                MyBase.Tables.Add(New otherYogaMedicationDataTable(ds.Tables("otherYogaMedication")))
+            End If
             If (Not (ds.Tables("users")) Is Nothing) Then
                 MyBase.Tables.Add(New usersDataTable(ds.Tables("users")))
             End If
@@ -212,6 +230,12 @@ Partial Public Class OYmembers
                 Me.tablemembers.InitVars
             End If
         End If
+        Me.tableotherYogaMedication = CType(MyBase.Tables("otherYogaMedication"),otherYogaMedicationDataTable)
+        If (initTable = true) Then
+            If (Not (Me.tableotherYogaMedication) Is Nothing) Then
+                Me.tableotherYogaMedication.InitVars
+            End If
+        End If
         Me.tableusers = CType(MyBase.Tables("users"),usersDataTable)
         If (initTable = true) Then
             If (Not (Me.tableusers) Is Nothing) Then
@@ -230,6 +254,8 @@ Partial Public Class OYmembers
         Me.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
         Me.tablemembers = New membersDataTable()
         MyBase.Tables.Add(Me.tablemembers)
+        Me.tableotherYogaMedication = New otherYogaMedicationDataTable()
+        MyBase.Tables.Add(Me.tableotherYogaMedication)
         Me.tableusers = New usersDataTable()
         MyBase.Tables.Add(Me.tableusers)
     End Sub
@@ -237,6 +263,12 @@ Partial Public Class OYmembers
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Private Function ShouldSerializemembers() As Boolean
+        Return false
+    End Function
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Private Function ShouldSerializeotherYogaMedication() As Boolean
         Return false
     End Function
     
@@ -306,6 +338,9 @@ Partial Public Class OYmembers
     
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Public Delegate Sub membersRowChangeEventHandler(ByVal sender As Object, ByVal e As membersRowChangeEvent)
+    
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Delegate Sub otherYogaMedicationRowChangeEventHandler(ByVal sender As Object, ByVal e As otherYogaMedicationRowChangeEvent)
     
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Public Delegate Sub usersRowChangeEventHandler(ByVal sender As Object, ByVal e As usersRowChangeEvent)
@@ -395,6 +430,10 @@ Partial Public Class OYmembers
         Private columnfriendExplain As Global.System.Data.DataColumn
         
         Private columndateRegistered As Global.System.Data.DataColumn
+        
+        Private columnoccupation As Global.System.Data.DataColumn
+        
+        Private columnofficeAddr2 As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
@@ -744,6 +783,22 @@ Partial Public Class OYmembers
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property occupationColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnoccupation
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property officeAddr2Column() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnofficeAddr2
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -818,9 +873,11 @@ Partial Public Class OYmembers
                     ByVal OYOthers As String,  _
                     ByVal newspaperExplain As String,  _
                     ByVal friendExplain As String,  _
-                    ByVal dateRegistered As Date) As membersRow
+                    ByVal dateRegistered As Date,  _
+                    ByVal occupation As String,  _
+                    ByVal officeAddr2 As String) As membersRow
             Dim rowmembersRow As membersRow = CType(Me.NewRow,membersRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, surname, firstname, MI, nickname, homeAddr, zipcode, officeAddr, birthdate, civilStatus, sex, mobileNo, otherContact, email, contactPerson, contactPersonNo, contactPersonRelationship, contactPersonAddr, asthma, epilepsy, highBlood, heartProblem, backpain, pregnancy, otherHealthCondition, prescribedMedication, prescribedMedicationExplain, physicianOrHospitalCare, surgery, surgeryExplain, OYinternet, OYFlyer, OYNewspaper, OYFriend, OYBrochure, OYOthers, newspaperExplain, friendExplain, dateRegistered}
+            Dim columnValuesArray() As Object = New Object() {Nothing, surname, firstname, MI, nickname, homeAddr, zipcode, officeAddr, birthdate, civilStatus, sex, mobileNo, otherContact, email, contactPerson, contactPersonNo, contactPersonRelationship, contactPersonAddr, asthma, epilepsy, highBlood, heartProblem, backpain, pregnancy, otherHealthCondition, prescribedMedication, prescribedMedicationExplain, physicianOrHospitalCare, surgery, surgeryExplain, OYinternet, OYFlyer, OYNewspaper, OYFriend, OYBrochure, OYOthers, newspaperExplain, friendExplain, dateRegistered, occupation, officeAddr2}
             rowmembersRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowmembersRow)
             Return rowmembersRow
@@ -888,6 +945,8 @@ Partial Public Class OYmembers
             Me.columnnewspaperExplain = MyBase.Columns("newspaperExplain")
             Me.columnfriendExplain = MyBase.Columns("friendExplain")
             Me.columndateRegistered = MyBase.Columns("dateRegistered")
+            Me.columnoccupation = MyBase.Columns("occupation")
+            Me.columnofficeAddr2 = MyBase.Columns("officeAddr2")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -971,6 +1030,10 @@ Partial Public Class OYmembers
             MyBase.Columns.Add(Me.columnfriendExplain)
             Me.columndateRegistered = New Global.System.Data.DataColumn("dateRegistered", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columndateRegistered)
+            Me.columnoccupation = New Global.System.Data.DataColumn("occupation", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnoccupation)
+            Me.columnofficeAddr2 = New Global.System.Data.DataColumn("officeAddr2", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnofficeAddr2)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnmemberID}, true))
             Me.columnmemberID.AutoIncrement = true
             Me.columnmemberID.AutoIncrementSeed = -1
@@ -994,13 +1057,28 @@ Partial Public Class OYmembers
             Me.columncontactPersonNo.MaxLength = 50
             Me.columncontactPersonRelationship.MaxLength = 50
             Me.columncontactPersonAddr.MaxLength = 2147483647
+            Me.columnasthma.AllowDBNull = false
+            Me.columnepilepsy.AllowDBNull = false
+            Me.columnhighBlood.AllowDBNull = false
+            Me.columnheartProblem.AllowDBNull = false
+            Me.columnbackpain.AllowDBNull = false
+            Me.columnpregnancy.AllowDBNull = false
             Me.columnotherHealthCondition.MaxLength = 2147483647
+            Me.columnprescribedMedication.AllowDBNull = false
             Me.columnprescribedMedicationExplain.MaxLength = 2147483647
             Me.columnphysicianOrHospitalCare.MaxLength = 2147483647
+            Me.columnsurgery.AllowDBNull = false
             Me.columnsurgeryExplain.MaxLength = 2147483647
+            Me.columnOYinternet.AllowDBNull = false
+            Me.columnOYFlyer.AllowDBNull = false
+            Me.columnOYNewspaper.AllowDBNull = false
+            Me.columnOYFriend.AllowDBNull = false
+            Me.columnOYBrochure.AllowDBNull = false
             Me.columnOYOthers.MaxLength = 2147483647
             Me.columnnewspaperExplain.MaxLength = 2147483647
             Me.columnfriendExplain.MaxLength = 2147483647
+            Me.columnoccupation.MaxLength = 2147483647
+            Me.columnofficeAddr2.MaxLength = 2147483647
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1087,6 +1165,284 @@ Partial Public Class OYmembers
             Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
             attribute2.Name = "tableTypeName"
             attribute2.FixedValue = "membersDataTable"
+            type.Attributes.Add(attribute2)
+            type.Particle = sequence
+            Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
+            If xs.Contains(dsSchema.TargetNamespace) Then
+                Dim s1 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Dim s2 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Try 
+                    Dim schema As Global.System.Xml.Schema.XmlSchema = Nothing
+                    dsSchema.Write(s1)
+                    Dim schemas As Global.System.Collections.IEnumerator = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator
+                    Do While schemas.MoveNext
+                        schema = CType(schemas.Current,Global.System.Xml.Schema.XmlSchema)
+                        s2.SetLength(0)
+                        schema.Write(s2)
+                        If (s1.Length = s2.Length) Then
+                            s1.Position = 0
+                            s2.Position = 0
+                            
+                            Do While ((s1.Position <> s1.Length)  _
+                                        AndAlso (s1.ReadByte = s2.ReadByte))
+                                
+                                
+                            Loop
+                            If (s1.Position = s1.Length) Then
+                                Return type
+                            End If
+                        End If
+                        
+                    Loop
+                Finally
+                    If (Not (s1) Is Nothing) Then
+                        s1.Close
+                    End If
+                    If (Not (s2) Is Nothing) Then
+                        s2.Close
+                    End If
+                End Try
+            End If
+            xs.Add(dsSchema)
+            Return type
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the strongly named DataTable class.
+    '''</summary>
+    <Global.System.Serializable(),  _
+     Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
+    Partial Public Class otherYogaMedicationDataTable
+        Inherits Global.System.Data.TypedTableBase(Of otherYogaMedicationRow)
+        
+        Private columnId As Global.System.Data.DataColumn
+        
+        Private columnmemberID As Global.System.Data.DataColumn
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.TableName = "otherYogaMedication"
+            Me.BeginInit
+            Me.InitClass
+            Me.EndInit
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal table As Global.System.Data.DataTable)
+            MyBase.New
+            Me.TableName = table.TableName
+            If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
+                Me.CaseSensitive = table.CaseSensitive
+            End If
+            If (table.Locale.ToString <> table.DataSet.Locale.ToString) Then
+                Me.Locale = table.Locale
+            End If
+            If (table.Namespace <> table.DataSet.Namespace) Then
+                Me.Namespace = table.Namespace
+            End If
+            Me.Prefix = table.Prefix
+            Me.MinimumCapacity = table.MinimumCapacity
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
+            MyBase.New(info, context)
+            Me.InitVars
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property IdColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnId
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property memberIDColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnmemberID
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Browsable(false)>  _
+        Public ReadOnly Property Count() As Integer
+            Get
+                Return Me.Rows.Count
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Default ReadOnly Property Item(ByVal index As Integer) As otherYogaMedicationRow
+            Get
+                Return CType(Me.Rows(index),otherYogaMedicationRow)
+            End Get
+        End Property
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event otherYogaMedicationRowChanging As otherYogaMedicationRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event otherYogaMedicationRowChanged As otherYogaMedicationRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event otherYogaMedicationRowDeleting As otherYogaMedicationRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event otherYogaMedicationRowDeleted As otherYogaMedicationRowChangeEventHandler
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Sub AddotherYogaMedicationRow(ByVal row As otherYogaMedicationRow)
+            Me.Rows.Add(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Function AddotherYogaMedicationRow(ByVal memberID As Integer) As otherYogaMedicationRow
+            Dim rowotherYogaMedicationRow As otherYogaMedicationRow = CType(Me.NewRow,otherYogaMedicationRow)
+            Dim columnValuesArray() As Object = New Object() {Nothing, memberID}
+            rowotherYogaMedicationRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowotherYogaMedicationRow)
+            Return rowotherYogaMedicationRow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function FindById(ByVal Id As Integer) As otherYogaMedicationRow
+            Return CType(Me.Rows.Find(New Object() {Id}),otherYogaMedicationRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overrides Function Clone() As Global.System.Data.DataTable
+            Dim cln As otherYogaMedicationDataTable = CType(MyBase.Clone,otherYogaMedicationDataTable)
+            cln.InitVars
+            Return cln
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
+            Return New otherYogaMedicationDataTable()
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub InitVars()
+            Me.columnId = MyBase.Columns("Id")
+            Me.columnmemberID = MyBase.Columns("memberID")
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitClass()
+            Me.columnId = New Global.System.Data.DataColumn("Id", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnId)
+            Me.columnmemberID = New Global.System.Data.DataColumn("memberID", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnmemberID)
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnId}, true))
+            Me.columnId.AutoIncrement = true
+            Me.columnId.AutoIncrementSeed = -1
+            Me.columnId.AutoIncrementStep = -1
+            Me.columnId.AllowDBNull = false
+            Me.columnId.ReadOnly = true
+            Me.columnId.Unique = true
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function NewotherYogaMedicationRow() As otherYogaMedicationRow
+            Return CType(Me.NewRow,otherYogaMedicationRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
+            Return New otherYogaMedicationRow(builder)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function GetRowType() As Global.System.Type
+            Return GetType(otherYogaMedicationRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanged(e)
+            If (Not (Me.otherYogaMedicationRowChangedEvent) Is Nothing) Then
+                RaiseEvent otherYogaMedicationRowChanged(Me, New otherYogaMedicationRowChangeEvent(CType(e.Row,otherYogaMedicationRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanging(e)
+            If (Not (Me.otherYogaMedicationRowChangingEvent) Is Nothing) Then
+                RaiseEvent otherYogaMedicationRowChanging(Me, New otherYogaMedicationRowChangeEvent(CType(e.Row,otherYogaMedicationRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleted(e)
+            If (Not (Me.otherYogaMedicationRowDeletedEvent) Is Nothing) Then
+                RaiseEvent otherYogaMedicationRowDeleted(Me, New otherYogaMedicationRowChangeEvent(CType(e.Row,otherYogaMedicationRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleting(e)
+            If (Not (Me.otherYogaMedicationRowDeletingEvent) Is Nothing) Then
+                RaiseEvent otherYogaMedicationRowDeleting(Me, New otherYogaMedicationRowChangeEvent(CType(e.Row,otherYogaMedicationRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub RemoveotherYogaMedicationRow(ByVal row As otherYogaMedicationRow)
+            Me.Rows.Remove(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
+            Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
+            Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
+            Dim ds As OYmembers = New OYmembers()
+            Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any1.Namespace = "http://www.w3.org/2001/XMLSchema"
+            any1.MinOccurs = New Decimal(0)
+            any1.MaxOccurs = Decimal.MaxValue
+            any1.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any1)
+            Dim any2 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1"
+            any2.MinOccurs = New Decimal(1)
+            any2.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any2)
+            Dim attribute1 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute1.Name = "namespace"
+            attribute1.FixedValue = ds.Namespace
+            type.Attributes.Add(attribute1)
+            Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute2.Name = "tableTypeName"
+            attribute2.FixedValue = "otherYogaMedicationDataTable"
             type.Attributes.Add(attribute2)
             type.Particle = sequence
             Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
@@ -1722,11 +2078,7 @@ Partial Public Class OYmembers
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property asthma() As Boolean
             Get
-                Try 
-                    Return CType(Me(Me.tablemembers.asthmaColumn),Boolean)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'asthma' in table 'members' is DBNull.", e)
-                End Try
+                Return CType(Me(Me.tablemembers.asthmaColumn),Boolean)
             End Get
             Set
                 Me(Me.tablemembers.asthmaColumn) = value
@@ -1737,11 +2089,7 @@ Partial Public Class OYmembers
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property epilepsy() As Boolean
             Get
-                Try 
-                    Return CType(Me(Me.tablemembers.epilepsyColumn),Boolean)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'epilepsy' in table 'members' is DBNull.", e)
-                End Try
+                Return CType(Me(Me.tablemembers.epilepsyColumn),Boolean)
             End Get
             Set
                 Me(Me.tablemembers.epilepsyColumn) = value
@@ -1752,11 +2100,7 @@ Partial Public Class OYmembers
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property highBlood() As Boolean
             Get
-                Try 
-                    Return CType(Me(Me.tablemembers.highBloodColumn),Boolean)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'highBlood' in table 'members' is DBNull.", e)
-                End Try
+                Return CType(Me(Me.tablemembers.highBloodColumn),Boolean)
             End Get
             Set
                 Me(Me.tablemembers.highBloodColumn) = value
@@ -1767,11 +2111,7 @@ Partial Public Class OYmembers
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property heartProblem() As Boolean
             Get
-                Try 
-                    Return CType(Me(Me.tablemembers.heartProblemColumn),Boolean)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'heartProblem' in table 'members' is DBNull.", e)
-                End Try
+                Return CType(Me(Me.tablemembers.heartProblemColumn),Boolean)
             End Get
             Set
                 Me(Me.tablemembers.heartProblemColumn) = value
@@ -1782,11 +2122,7 @@ Partial Public Class OYmembers
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property backpain() As Boolean
             Get
-                Try 
-                    Return CType(Me(Me.tablemembers.backpainColumn),Boolean)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'backpain' in table 'members' is DBNull.", e)
-                End Try
+                Return CType(Me(Me.tablemembers.backpainColumn),Boolean)
             End Get
             Set
                 Me(Me.tablemembers.backpainColumn) = value
@@ -1797,11 +2133,7 @@ Partial Public Class OYmembers
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property pregnancy() As Boolean
             Get
-                Try 
-                    Return CType(Me(Me.tablemembers.pregnancyColumn),Boolean)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'pregnancy' in table 'members' is DBNull.", e)
-                End Try
+                Return CType(Me(Me.tablemembers.pregnancyColumn),Boolean)
             End Get
             Set
                 Me(Me.tablemembers.pregnancyColumn) = value
@@ -1827,11 +2159,7 @@ Partial Public Class OYmembers
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property prescribedMedication() As Boolean
             Get
-                Try 
-                    Return CType(Me(Me.tablemembers.prescribedMedicationColumn),Boolean)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'prescribedMedication' in table 'members' is DBNull.", e)
-                End Try
+                Return CType(Me(Me.tablemembers.prescribedMedicationColumn),Boolean)
             End Get
             Set
                 Me(Me.tablemembers.prescribedMedicationColumn) = value
@@ -1872,11 +2200,7 @@ Partial Public Class OYmembers
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property surgery() As Boolean
             Get
-                Try 
-                    Return CType(Me(Me.tablemembers.surgeryColumn),Boolean)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'surgery' in table 'members' is DBNull.", e)
-                End Try
+                Return CType(Me(Me.tablemembers.surgeryColumn),Boolean)
             End Get
             Set
                 Me(Me.tablemembers.surgeryColumn) = value
@@ -1902,11 +2226,7 @@ Partial Public Class OYmembers
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property OYinternet() As Boolean
             Get
-                Try 
-                    Return CType(Me(Me.tablemembers.OYinternetColumn),Boolean)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'OYinternet' in table 'members' is DBNull.", e)
-                End Try
+                Return CType(Me(Me.tablemembers.OYinternetColumn),Boolean)
             End Get
             Set
                 Me(Me.tablemembers.OYinternetColumn) = value
@@ -1917,11 +2237,7 @@ Partial Public Class OYmembers
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property OYFlyer() As Boolean
             Get
-                Try 
-                    Return CType(Me(Me.tablemembers.OYFlyerColumn),Boolean)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'OYFlyer' in table 'members' is DBNull.", e)
-                End Try
+                Return CType(Me(Me.tablemembers.OYFlyerColumn),Boolean)
             End Get
             Set
                 Me(Me.tablemembers.OYFlyerColumn) = value
@@ -1932,11 +2248,7 @@ Partial Public Class OYmembers
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property OYNewspaper() As Boolean
             Get
-                Try 
-                    Return CType(Me(Me.tablemembers.OYNewspaperColumn),Boolean)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'OYNewspaper' in table 'members' is DBNull.", e)
-                End Try
+                Return CType(Me(Me.tablemembers.OYNewspaperColumn),Boolean)
             End Get
             Set
                 Me(Me.tablemembers.OYNewspaperColumn) = value
@@ -1947,11 +2259,7 @@ Partial Public Class OYmembers
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property OYFriend() As Boolean
             Get
-                Try 
-                    Return CType(Me(Me.tablemembers.OYFriendColumn),Boolean)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'OYFriend' in table 'members' is DBNull.", e)
-                End Try
+                Return CType(Me(Me.tablemembers.OYFriendColumn),Boolean)
             End Get
             Set
                 Me(Me.tablemembers.OYFriendColumn) = value
@@ -1962,11 +2270,7 @@ Partial Public Class OYmembers
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property OYBrochure() As Boolean
             Get
-                Try 
-                    Return CType(Me(Me.tablemembers.OYBrochureColumn),Boolean)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'OYBrochure' in table 'members' is DBNull.", e)
-                End Try
+                Return CType(Me(Me.tablemembers.OYBrochureColumn),Boolean)
             End Get
             Set
                 Me(Me.tablemembers.OYBrochureColumn) = value
@@ -2030,6 +2334,36 @@ Partial Public Class OYmembers
             End Get
             Set
                 Me(Me.tablemembers.dateRegisteredColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property occupation() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablemembers.occupationColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'occupation' in table 'members' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablemembers.occupationColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property officeAddr2() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablemembers.officeAddr2Column),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'officeAddr2' in table 'members' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablemembers.officeAddr2Column) = value
             End Set
         End Property
         
@@ -2239,78 +2573,6 @@ Partial Public Class OYmembers
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsasthmaNull() As Boolean
-            Return Me.IsNull(Me.tablemembers.asthmaColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetasthmaNull()
-            Me(Me.tablemembers.asthmaColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsepilepsyNull() As Boolean
-            Return Me.IsNull(Me.tablemembers.epilepsyColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetepilepsyNull()
-            Me(Me.tablemembers.epilepsyColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IshighBloodNull() As Boolean
-            Return Me.IsNull(Me.tablemembers.highBloodColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SethighBloodNull()
-            Me(Me.tablemembers.highBloodColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsheartProblemNull() As Boolean
-            Return Me.IsNull(Me.tablemembers.heartProblemColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetheartProblemNull()
-            Me(Me.tablemembers.heartProblemColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsbackpainNull() As Boolean
-            Return Me.IsNull(Me.tablemembers.backpainColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetbackpainNull()
-            Me(Me.tablemembers.backpainColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IspregnancyNull() As Boolean
-            Return Me.IsNull(Me.tablemembers.pregnancyColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetpregnancyNull()
-            Me(Me.tablemembers.pregnancyColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsotherHealthConditionNull() As Boolean
             Return Me.IsNull(Me.tablemembers.otherHealthConditionColumn)
         End Function
@@ -2319,18 +2581,6 @@ Partial Public Class OYmembers
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetotherHealthConditionNull()
             Me(Me.tablemembers.otherHealthConditionColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsprescribedMedicationNull() As Boolean
-            Return Me.IsNull(Me.tablemembers.prescribedMedicationColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetprescribedMedicationNull()
-            Me(Me.tablemembers.prescribedMedicationColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2359,18 +2609,6 @@ Partial Public Class OYmembers
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IssurgeryNull() As Boolean
-            Return Me.IsNull(Me.tablemembers.surgeryColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetsurgeryNull()
-            Me(Me.tablemembers.surgeryColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IssurgeryExplainNull() As Boolean
             Return Me.IsNull(Me.tablemembers.surgeryExplainColumn)
         End Function
@@ -2379,66 +2617,6 @@ Partial Public Class OYmembers
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetsurgeryExplainNull()
             Me(Me.tablemembers.surgeryExplainColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsOYinternetNull() As Boolean
-            Return Me.IsNull(Me.tablemembers.OYinternetColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetOYinternetNull()
-            Me(Me.tablemembers.OYinternetColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsOYFlyerNull() As Boolean
-            Return Me.IsNull(Me.tablemembers.OYFlyerColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetOYFlyerNull()
-            Me(Me.tablemembers.OYFlyerColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsOYNewspaperNull() As Boolean
-            Return Me.IsNull(Me.tablemembers.OYNewspaperColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetOYNewspaperNull()
-            Me(Me.tablemembers.OYNewspaperColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsOYFriendNull() As Boolean
-            Return Me.IsNull(Me.tablemembers.OYFriendColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetOYFriendNull()
-            Me(Me.tablemembers.OYFriendColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsOYBrochureNull() As Boolean
-            Return Me.IsNull(Me.tablemembers.OYBrochureColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetOYBrochureNull()
-            Me(Me.tablemembers.OYBrochureColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2487,6 +2665,84 @@ Partial Public Class OYmembers
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetdateRegisteredNull()
             Me(Me.tablemembers.dateRegisteredColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsoccupationNull() As Boolean
+            Return Me.IsNull(Me.tablemembers.occupationColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetoccupationNull()
+            Me(Me.tablemembers.occupationColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsofficeAddr2Null() As Boolean
+            Return Me.IsNull(Me.tablemembers.officeAddr2Column)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetofficeAddr2Null()
+            Me(Me.tablemembers.officeAddr2Column) = Global.System.Convert.DBNull
+        End Sub
+    End Class
+    
+    '''<summary>
+    '''Represents strongly named DataRow class.
+    '''</summary>
+    Partial Public Class otherYogaMedicationRow
+        Inherits Global.System.Data.DataRow
+        
+        Private tableotherYogaMedication As otherYogaMedicationDataTable
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
+            MyBase.New(rb)
+            Me.tableotherYogaMedication = CType(Me.Table,otherYogaMedicationDataTable)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Id() As Integer
+            Get
+                Return CType(Me(Me.tableotherYogaMedication.IdColumn),Integer)
+            End Get
+            Set
+                Me(Me.tableotherYogaMedication.IdColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property memberID() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableotherYogaMedication.memberIDColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'memberID' in table 'otherYogaMedication' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableotherYogaMedication.memberIDColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsmemberIDNull() As Boolean
+            Return Me.IsNull(Me.tableotherYogaMedication.memberIDColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetmemberIDNull()
+            Me(Me.tableotherYogaMedication.memberIDColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -2620,6 +2876,42 @@ Partial Public Class OYmembers
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public ReadOnly Property Row() As membersRow
+            Get
+                Return Me.eventRow
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Action() As Global.System.Data.DataRowAction
+            Get
+                Return Me.eventAction
+            End Get
+        End Property
+    End Class
+    
+    '''<summary>
+    '''Row event argument class
+    '''</summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Class otherYogaMedicationRowChangeEvent
+        Inherits Global.System.EventArgs
+        
+        Private eventRow As otherYogaMedicationRow
+        
+        Private eventAction As Global.System.Data.DataRowAction
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New(ByVal row As otherYogaMedicationRow, ByVal action As Global.System.Data.DataRowAction)
+            MyBase.New
+            Me.eventRow = row
+            Me.eventAction = action
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Row() As otherYogaMedicationRow
             Get
                 Return Me.eventRow
             End Get
@@ -2839,38 +3131,31 @@ Namespace OYmembersTableAdapters
             tableMapping.ColumnMappings.Add("newspaperExplain", "newspaperExplain")
             tableMapping.ColumnMappings.Add("friendExplain", "friendExplain")
             tableMapping.ColumnMappings.Add("dateRegistered", "dateRegistered")
+            tableMapping.ColumnMappings.Add("occupation", "occupation")
+            tableMapping.ColumnMappings.Add("officeAddr2", "officeAddr2")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[members] WHERE (([memberID] = @Original_memberID) AND ((@IsNul"& _ 
-                "l_MI = 1 AND [MI] IS NULL) OR ([MI] = @Original_MI)) AND ((@IsNull_nickname = 1 "& _ 
-                "AND [nickname] IS NULL) OR ([nickname] = @Original_nickname)) AND ((@IsNull_zipc"& _ 
-                "ode = 1 AND [zipcode] IS NULL) OR ([zipcode] = @Original_zipcode)) AND ((@IsNull"& _ 
-                "_birthdate = 1 AND [birthdate] IS NULL) OR ([birthdate] = @Original_birthdate)) "& _ 
-                "AND ((@IsNull_sex = 1 AND [sex] IS NULL) OR ([sex] = @Original_sex)) AND ((@IsNu"& _ 
-                "ll_mobileNo = 1 AND [mobileNo] IS NULL) OR ([mobileNo] = @Original_mobileNo)) AN"& _ 
-                "D ((@IsNull_otherContact = 1 AND [otherContact] IS NULL) OR ([otherContact] = @O"& _ 
-                "riginal_otherContact)) AND ((@IsNull_contactPersonNo = 1 AND [contactPersonNo] I"& _ 
-                "S NULL) OR ([contactPersonNo] = @Original_contactPersonNo)) AND ((@IsNull_contac"& _ 
-                "tPersonRelationship = 1 AND [contactPersonRelationship] IS NULL) OR ([contactPer"& _ 
-                "sonRelationship] = @Original_contactPersonRelationship)) AND ((@IsNull_asthma = "& _ 
-                "1 AND [asthma] IS NULL) OR ([asthma] = @Original_asthma)) AND ((@IsNull_epilepsy"& _ 
-                " = 1 AND [epilepsy] IS NULL) OR ([epilepsy] = @Original_epilepsy)) AND ((@IsNull"& _ 
-                "_highBlood = 1 AND [highBlood] IS NULL) OR ([highBlood] = @Original_highBlood)) "& _ 
-                "AND ((@IsNull_heartProblem = 1 AND [heartProblem] IS NULL) OR ([heartProblem] = "& _ 
-                "@Original_heartProblem)) AND ((@IsNull_backpain = 1 AND [backpain] IS NULL) OR ("& _ 
-                "[backpain] = @Original_backpain)) AND ((@IsNull_pregnancy = 1 AND [pregnancy] IS"& _ 
-                " NULL) OR ([pregnancy] = @Original_pregnancy)) AND ((@IsNull_prescribedMedicatio"& _ 
-                "n = 1 AND [prescribedMedication] IS NULL) OR ([prescribedMedication] = @Original"& _ 
-                "_prescribedMedication)) AND ((@IsNull_surgery = 1 AND [surgery] IS NULL) OR ([su"& _ 
-                "rgery] = @Original_surgery)) AND ((@IsNull_OYinternet = 1 AND [OYinternet] IS NU"& _ 
-                "LL) OR ([OYinternet] = @Original_OYinternet)) AND ((@IsNull_OYFlyer = 1 AND [OYF"& _ 
-                "lyer] IS NULL) OR ([OYFlyer] = @Original_OYFlyer)) AND ((@IsNull_OYNewspaper = 1"& _ 
-                " AND [OYNewspaper] IS NULL) OR ([OYNewspaper] = @Original_OYNewspaper)) AND ((@I"& _ 
-                "sNull_OYFriend = 1 AND [OYFriend] IS NULL) OR ([OYFriend] = @Original_OYFriend))"& _ 
-                " AND ((@IsNull_OYBrochure = 1 AND [OYBrochure] IS NULL) OR ([OYBrochure] = @Orig"& _ 
-                "inal_OYBrochure)) AND ((@IsNull_dateRegistered = 1 AND [dateRegistered] IS NULL)"& _ 
-                " OR ([dateRegistered] = @Original_dateRegistered)))"
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [members] WHERE (([memberID] = @Original_memberID) AND ((@IsNull_MI ="& _ 
+                " 1 AND [MI] IS NULL) OR ([MI] = @Original_MI)) AND ((@IsNull_nickname = 1 AND [n"& _ 
+                "ickname] IS NULL) OR ([nickname] = @Original_nickname)) AND ((@IsNull_zipcode = "& _ 
+                "1 AND [zipcode] IS NULL) OR ([zipcode] = @Original_zipcode)) AND ((@IsNull_birth"& _ 
+                "date = 1 AND [birthdate] IS NULL) OR ([birthdate] = @Original_birthdate)) AND (("& _ 
+                "@IsNull_sex = 1 AND [sex] IS NULL) OR ([sex] = @Original_sex)) AND ((@IsNull_mob"& _ 
+                "ileNo = 1 AND [mobileNo] IS NULL) OR ([mobileNo] = @Original_mobileNo)) AND ((@I"& _ 
+                "sNull_otherContact = 1 AND [otherContact] IS NULL) OR ([otherContact] = @Origina"& _ 
+                "l_otherContact)) AND ((@IsNull_contactPersonNo = 1 AND [contactPersonNo] IS NULL"& _ 
+                ") OR ([contactPersonNo] = @Original_contactPersonNo)) AND ((@IsNull_contactPerso"& _ 
+                "nRelationship = 1 AND [contactPersonRelationship] IS NULL) OR ([contactPersonRel"& _ 
+                "ationship] = @Original_contactPersonRelationship)) AND ([asthma] = @Original_ast"& _ 
+                "hma) AND ([epilepsy] = @Original_epilepsy) AND ([highBlood] = @Original_highBloo"& _ 
+                "d) AND ([heartProblem] = @Original_heartProblem) AND ([backpain] = @Original_bac"& _ 
+                "kpain) AND ([pregnancy] = @Original_pregnancy) AND ([prescribedMedication] = @Or"& _ 
+                "iginal_prescribedMedication) AND ([surgery] = @Original_surgery) AND ([OYinterne"& _ 
+                "t] = @Original_OYinternet) AND ([OYFlyer] = @Original_OYFlyer) AND ([OYNewspaper"& _ 
+                "] = @Original_OYNewspaper) AND ([OYFriend] = @Original_OYFriend) AND ([OYBrochur"& _ 
+                "e] = @Original_OYBrochure) AND ((@IsNull_dateRegistered = 1 AND [dateRegistered]"& _ 
+                " IS NULL) OR ([dateRegistered] = @Original_dateRegistered)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_memberID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "memberID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_MI", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MI", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
@@ -2891,58 +3176,46 @@ Namespace OYmembersTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_contactPersonNo", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "contactPersonNo", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_contactPersonRelationship", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "contactPersonRelationship", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_contactPersonRelationship", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "contactPersonRelationship", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_asthma", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "asthma", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_asthma", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "asthma", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_epilepsy", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "epilepsy", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_epilepsy", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "epilepsy", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_highBlood", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "highBlood", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_highBlood", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "highBlood", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_heartProblem", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "heartProblem", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_heartProblem", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "heartProblem", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_backpain", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "backpain", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_backpain", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "backpain", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_pregnancy", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "pregnancy", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_pregnancy", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "pregnancy", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_prescribedMedication", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "prescribedMedication", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_prescribedMedication", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "prescribedMedication", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_surgery", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "surgery", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_surgery", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "surgery", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_OYinternet", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "OYinternet", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_OYinternet", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "OYinternet", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_OYFlyer", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "OYFlyer", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_OYFlyer", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "OYFlyer", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_OYNewspaper", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "OYNewspaper", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_OYNewspaper", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "OYNewspaper", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_OYFriend", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "OYFriend", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_OYFriend", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "OYFriend", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_OYBrochure", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "OYBrochure", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_OYBrochure", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "OYBrochure", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_dateRegistered", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "dateRegistered", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_dateRegistered", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "dateRegistered", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[members] ([surname], [firstname], [MI], [nickname], [homeAddr]"& _ 
-                ", [zipcode], [officeAddr], [birthdate], [civilStatus], [sex], [mobileNo], [other"& _ 
-                "Contact], [email], [contactPerson], [contactPersonNo], [contactPersonRelationshi"& _ 
-                "p], [contactPersonAddr], [asthma], [epilepsy], [highBlood], [heartProblem], [bac"& _ 
-                "kpain], [pregnancy], [otherHealthCondition], [prescribedMedication], [prescribed"& _ 
-                "MedicationExplain], [physicianOrHospitalCare], [surgery], [surgeryExplain], [OYi"& _ 
-                "nternet], [OYFlyer], [OYNewspaper], [OYFriend], [OYBrochure], [OYOthers], [newsp"& _ 
-                "aperExplain], [friendExplain], [dateRegistered]) VALUES (@surname, @firstname, @"& _ 
-                "MI, @nickname, @homeAddr, @zipcode, @officeAddr, @birthdate, @civilStatus, @sex,"& _ 
-                " @mobileNo, @otherContact, @email, @contactPerson, @contactPersonNo, @contactPer"& _ 
-                "sonRelationship, @contactPersonAddr, @asthma, @epilepsy, @highBlood, @heartProbl"& _ 
-                "em, @backpain, @pregnancy, @otherHealthCondition, @prescribedMedication, @prescr"& _ 
-                "ibedMedicationExplain, @physicianOrHospitalCare, @surgery, @surgeryExplain, @OYi"& _ 
-                "nternet, @OYFlyer, @OYNewspaper, @OYFriend, @OYBrochure, @OYOthers, @newspaperEx"& _ 
-                "plain, @friendExplain, @dateRegistered);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT memberID, surname, firstname, M"& _ 
-                "I, nickname, homeAddr, zipcode, officeAddr, birthdate, civilStatus, sex, mobileN"& _ 
-                "o, otherContact, email, contactPerson, contactPersonNo, contactPersonRelationshi"& _ 
-                "p, contactPersonAddr, asthma, epilepsy, highBlood, heartProblem, backpain, pregn"& _ 
-                "ancy, otherHealthCondition, prescribedMedication, prescribedMedicationExplain, p"& _ 
-                "hysicianOrHospitalCare, surgery, surgeryExplain, OYinternet, OYFlyer, OYNewspape"& _ 
-                "r, OYFriend, OYBrochure, OYOthers, newspaperExplain, friendExplain, dateRegister"& _ 
-                "ed FROM members WHERE (memberID = SCOPE_IDENTITY())"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO [members] ([surname], [firstname], [MI], [nickname], [homeAddr], [zip"& _ 
+                "code], [officeAddr], [birthdate], [civilStatus], [sex], [mobileNo], [otherContac"& _ 
+                "t], [email], [contactPerson], [contactPersonNo], [contactPersonRelationship], [c"& _ 
+                "ontactPersonAddr], [asthma], [epilepsy], [highBlood], [heartProblem], [backpain]"& _ 
+                ", [pregnancy], [otherHealthCondition], [prescribedMedication], [prescribedMedica"& _ 
+                "tionExplain], [physicianOrHospitalCare], [surgery], [surgeryExplain], [OYinterne"& _ 
+                "t], [OYFlyer], [OYNewspaper], [OYFriend], [OYBrochure], [OYOthers], [newspaperEx"& _ 
+                "plain], [friendExplain], [dateRegistered], [occupation], [officeAddr2]) VALUES ("& _ 
+                "@surname, @firstname, @MI, @nickname, @homeAddr, @zipcode, @officeAddr, @birthda"& _ 
+                "te, @civilStatus, @sex, @mobileNo, @otherContact, @email, @contactPerson, @conta"& _ 
+                "ctPersonNo, @contactPersonRelationship, @contactPersonAddr, @asthma, @epilepsy, "& _ 
+                "@highBlood, @heartProblem, @backpain, @pregnancy, @otherHealthCondition, @prescr"& _ 
+                "ibedMedication, @prescribedMedicationExplain, @physicianOrHospitalCare, @surgery"& _ 
+                ", @surgeryExplain, @OYinternet, @OYFlyer, @OYNewspaper, @OYFriend, @OYBrochure, "& _ 
+                "@OYOthers, @newspaperExplain, @friendExplain, @dateRegistered, @occupation, @off"& _ 
+                "iceAddr2);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT memberID, surname, firstname, MI, nickname, homeAddr, zipcode"& _ 
+                ", officeAddr, birthdate, civilStatus, sex, mobileNo, otherContact, email, contac"& _ 
+                "tPerson, contactPersonNo, contactPersonRelationship, contactPersonAddr, asthma, "& _ 
+                "epilepsy, highBlood, heartProblem, backpain, pregnancy, otherHealthCondition, pr"& _ 
+                "escribedMedication, prescribedMedicationExplain, physicianOrHospitalCare, surger"& _ 
+                "y, surgeryExplain, OYinternet, OYFlyer, OYNewspaper, OYFriend, OYBrochure, OYOth"& _ 
+                "ers, newspaperExplain, friendExplain, dateRegistered, occupation, officeAddr2 FR"& _ 
+                "OM members WHERE (memberID = SCOPE_IDENTITY())"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@surname", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "surname", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@firstname", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "firstname", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -2982,59 +3255,52 @@ Namespace OYmembersTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@newspaperExplain", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "newspaperExplain", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@friendExplain", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "friendExplain", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@dateRegistered", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "dateRegistered", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@occupation", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "occupation", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@officeAddr2", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "officeAddr2", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[members] SET [surname] = @surname, [firstname] = @firstname, [MI] ="& _ 
-                " @MI, [nickname] = @nickname, [homeAddr] = @homeAddr, [zipcode] = @zipcode, [off"& _ 
-                "iceAddr] = @officeAddr, [birthdate] = @birthdate, [civilStatus] = @civilStatus, "& _ 
-                "[sex] = @sex, [mobileNo] = @mobileNo, [otherContact] = @otherContact, [email] = "& _ 
-                "@email, [contactPerson] = @contactPerson, [contactPersonNo] = @contactPersonNo, "& _ 
-                "[contactPersonRelationship] = @contactPersonRelationship, [contactPersonAddr] = "& _ 
-                "@contactPersonAddr, [asthma] = @asthma, [epilepsy] = @epilepsy, [highBlood] = @h"& _ 
-                "ighBlood, [heartProblem] = @heartProblem, [backpain] = @backpain, [pregnancy] = "& _ 
-                "@pregnancy, [otherHealthCondition] = @otherHealthCondition, [prescribedMedicatio"& _ 
-                "n] = @prescribedMedication, [prescribedMedicationExplain] = @prescribedMedicatio"& _ 
-                "nExplain, [physicianOrHospitalCare] = @physicianOrHospitalCare, [surgery] = @sur"& _ 
-                "gery, [surgeryExplain] = @surgeryExplain, [OYinternet] = @OYinternet, [OYFlyer] "& _ 
-                "= @OYFlyer, [OYNewspaper] = @OYNewspaper, [OYFriend] = @OYFriend, [OYBrochure] ="& _ 
-                " @OYBrochure, [OYOthers] = @OYOthers, [newspaperExplain] = @newspaperExplain, [f"& _ 
-                "riendExplain] = @friendExplain, [dateRegistered] = @dateRegistered WHERE (([memb"& _ 
-                "erID] = @Original_memberID) AND ((@IsNull_MI = 1 AND [MI] IS NULL) OR ([MI] = @O"& _ 
-                "riginal_MI)) AND ((@IsNull_nickname = 1 AND [nickname] IS NULL) OR ([nickname] ="& _ 
-                " @Original_nickname)) AND ((@IsNull_zipcode = 1 AND [zipcode] IS NULL) OR ([zipc"& _ 
-                "ode] = @Original_zipcode)) AND ((@IsNull_birthdate = 1 AND [birthdate] IS NULL) "& _ 
-                "OR ([birthdate] = @Original_birthdate)) AND ((@IsNull_sex = 1 AND [sex] IS NULL)"& _ 
-                " OR ([sex] = @Original_sex)) AND ((@IsNull_mobileNo = 1 AND [mobileNo] IS NULL) "& _ 
-                "OR ([mobileNo] = @Original_mobileNo)) AND ((@IsNull_otherContact = 1 AND [otherC"& _ 
-                "ontact] IS NULL) OR ([otherContact] = @Original_otherContact)) AND ((@IsNull_con"& _ 
-                "tactPersonNo = 1 AND [contactPersonNo] IS NULL) OR ([contactPersonNo] = @Origina"& _ 
-                "l_contactPersonNo)) AND ((@IsNull_contactPersonRelationship = 1 AND [contactPers"& _ 
-                "onRelationship] IS NULL) OR ([contactPersonRelationship] = @Original_contactPers"& _ 
-                "onRelationship)) AND ((@IsNull_asthma = 1 AND [asthma] IS NULL) OR ([asthma] = @"& _ 
-                "Original_asthma)) AND ((@IsNull_epilepsy = 1 AND [epilepsy] IS NULL) OR ([epilep"& _ 
-                "sy] = @Original_epilepsy)) AND ((@IsNull_highBlood = 1 AND [highBlood] IS NULL) "& _ 
-                "OR ([highBlood] = @Original_highBlood)) AND ((@IsNull_heartProblem = 1 AND [hear"& _ 
-                "tProblem] IS NULL) OR ([heartProblem] = @Original_heartProblem)) AND ((@IsNull_b"& _ 
-                "ackpain = 1 AND [backpain] IS NULL) OR ([backpain] = @Original_backpain)) AND (("& _ 
-                "@IsNull_pregnancy = 1 AND [pregnancy] IS NULL) OR ([pregnancy] = @Original_pregn"& _ 
-                "ancy)) AND ((@IsNull_prescribedMedication = 1 AND [prescribedMedication] IS NULL"& _ 
-                ") OR ([prescribedMedication] = @Original_prescribedMedication)) AND ((@IsNull_su"& _ 
-                "rgery = 1 AND [surgery] IS NULL) OR ([surgery] = @Original_surgery)) AND ((@IsNu"& _ 
-                "ll_OYinternet = 1 AND [OYinternet] IS NULL) OR ([OYinternet] = @Original_OYinter"& _ 
-                "net)) AND ((@IsNull_OYFlyer = 1 AND [OYFlyer] IS NULL) OR ([OYFlyer] = @Original"& _ 
-                "_OYFlyer)) AND ((@IsNull_OYNewspaper = 1 AND [OYNewspaper] IS NULL) OR ([OYNewsp"& _ 
-                "aper] = @Original_OYNewspaper)) AND ((@IsNull_OYFriend = 1 AND [OYFriend] IS NUL"& _ 
-                "L) OR ([OYFriend] = @Original_OYFriend)) AND ((@IsNull_OYBrochure = 1 AND [OYBro"& _ 
-                "chure] IS NULL) OR ([OYBrochure] = @Original_OYBrochure)) AND ((@IsNull_dateRegi"& _ 
-                "stered = 1 AND [dateRegistered] IS NULL) OR ([dateRegistered] = @Original_dateRe"& _ 
-                "gistered)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT memberID, surname, firstname, MI, nickname, homeAddr, zipco"& _ 
-                "de, officeAddr, birthdate, civilStatus, sex, mobileNo, otherContact, email, cont"& _ 
-                "actPerson, contactPersonNo, contactPersonRelationship, contactPersonAddr, asthma"& _ 
-                ", epilepsy, highBlood, heartProblem, backpain, pregnancy, otherHealthCondition, "& _ 
-                "prescribedMedication, prescribedMedicationExplain, physicianOrHospitalCare, surg"& _ 
-                "ery, surgeryExplain, OYinternet, OYFlyer, OYNewspaper, OYFriend, OYBrochure, OYO"& _ 
-                "thers, newspaperExplain, friendExplain, dateRegistered FROM members WHERE (membe"& _ 
-                "rID = @memberID)"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE [members] SET [surname] = @surname, [firstname] = @firstname, [MI] = @MI, "& _ 
+                "[nickname] = @nickname, [homeAddr] = @homeAddr, [zipcode] = @zipcode, [officeAdd"& _ 
+                "r] = @officeAddr, [birthdate] = @birthdate, [civilStatus] = @civilStatus, [sex] "& _ 
+                "= @sex, [mobileNo] = @mobileNo, [otherContact] = @otherContact, [email] = @email"& _ 
+                ", [contactPerson] = @contactPerson, [contactPersonNo] = @contactPersonNo, [conta"& _ 
+                "ctPersonRelationship] = @contactPersonRelationship, [contactPersonAddr] = @conta"& _ 
+                "ctPersonAddr, [asthma] = @asthma, [epilepsy] = @epilepsy, [highBlood] = @highBlo"& _ 
+                "od, [heartProblem] = @heartProblem, [backpain] = @backpain, [pregnancy] = @pregn"& _ 
+                "ancy, [otherHealthCondition] = @otherHealthCondition, [prescribedMedication] = @"& _ 
+                "prescribedMedication, [prescribedMedicationExplain] = @prescribedMedicationExpla"& _ 
+                "in, [physicianOrHospitalCare] = @physicianOrHospitalCare, [surgery] = @surgery, "& _ 
+                "[surgeryExplain] = @surgeryExplain, [OYinternet] = @OYinternet, [OYFlyer] = @OYF"& _ 
+                "lyer, [OYNewspaper] = @OYNewspaper, [OYFriend] = @OYFriend, [OYBrochure] = @OYBr"& _ 
+                "ochure, [OYOthers] = @OYOthers, [newspaperExplain] = @newspaperExplain, [friendE"& _ 
+                "xplain] = @friendExplain, [dateRegistered] = @dateRegistered, [occupation] = @oc"& _ 
+                "cupation, [officeAddr2] = @officeAddr2 WHERE (([memberID] = @Original_memberID) "& _ 
+                "AND ((@IsNull_MI = 1 AND [MI] IS NULL) OR ([MI] = @Original_MI)) AND ((@IsNull_n"& _ 
+                "ickname = 1 AND [nickname] IS NULL) OR ([nickname] = @Original_nickname)) AND (("& _ 
+                "@IsNull_zipcode = 1 AND [zipcode] IS NULL) OR ([zipcode] = @Original_zipcode)) A"& _ 
+                "ND ((@IsNull_birthdate = 1 AND [birthdate] IS NULL) OR ([birthdate] = @Original_"& _ 
+                "birthdate)) AND ((@IsNull_sex = 1 AND [sex] IS NULL) OR ([sex] = @Original_sex))"& _ 
+                " AND ((@IsNull_mobileNo = 1 AND [mobileNo] IS NULL) OR ([mobileNo] = @Original_m"& _ 
+                "obileNo)) AND ((@IsNull_otherContact = 1 AND [otherContact] IS NULL) OR ([otherC"& _ 
+                "ontact] = @Original_otherContact)) AND ((@IsNull_contactPersonNo = 1 AND [contac"& _ 
+                "tPersonNo] IS NULL) OR ([contactPersonNo] = @Original_contactPersonNo)) AND ((@I"& _ 
+                "sNull_contactPersonRelationship = 1 AND [contactPersonRelationship] IS NULL) OR "& _ 
+                "([contactPersonRelationship] = @Original_contactPersonRelationship)) AND ([asthm"& _ 
+                "a] = @Original_asthma) AND ([epilepsy] = @Original_epilepsy) AND ([highBlood] = "& _ 
+                "@Original_highBlood) AND ([heartProblem] = @Original_heartProblem) AND ([backpai"& _ 
+                "n] = @Original_backpain) AND ([pregnancy] = @Original_pregnancy) AND ([prescribe"& _ 
+                "dMedication] = @Original_prescribedMedication) AND ([surgery] = @Original_surger"& _ 
+                "y) AND ([OYinternet] = @Original_OYinternet) AND ([OYFlyer] = @Original_OYFlyer)"& _ 
+                " AND ([OYNewspaper] = @Original_OYNewspaper) AND ([OYFriend] = @Original_OYFrien"& _ 
+                "d) AND ([OYBrochure] = @Original_OYBrochure) AND ((@IsNull_dateRegistered = 1 AN"& _ 
+                "D [dateRegistered] IS NULL) OR ([dateRegistered] = @Original_dateRegistered)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT memberID, surname, firstname, MI, nickname, homeAddr, zipcode, officeAdd"& _ 
+                "r, birthdate, civilStatus, sex, mobileNo, otherContact, email, contactPerson, co"& _ 
+                "ntactPersonNo, contactPersonRelationship, contactPersonAddr, asthma, epilepsy, h"& _ 
+                "ighBlood, heartProblem, backpain, pregnancy, otherHealthCondition, prescribedMed"& _ 
+                "ication, prescribedMedicationExplain, physicianOrHospitalCare, surgery, surgeryE"& _ 
+                "xplain, OYinternet, OYFlyer, OYNewspaper, OYFriend, OYBrochure, OYOthers, newspa"& _ 
+                "perExplain, friendExplain, dateRegistered, occupation, officeAddr2 FROM members "& _ 
+                "WHERE (memberID = @memberID)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@surname", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "surname", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@firstname", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "firstname", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -3074,6 +3340,8 @@ Namespace OYmembersTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@newspaperExplain", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "newspaperExplain", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@friendExplain", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "friendExplain", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@dateRegistered", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "dateRegistered", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@occupation", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "occupation", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@officeAddr2", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "officeAddr2", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_memberID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "memberID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_MI", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MI", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_MI", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MI", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
@@ -3093,31 +3361,18 @@ Namespace OYmembersTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_contactPersonNo", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "contactPersonNo", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_contactPersonRelationship", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "contactPersonRelationship", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_contactPersonRelationship", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "contactPersonRelationship", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_asthma", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "asthma", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_asthma", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "asthma", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_epilepsy", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "epilepsy", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_epilepsy", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "epilepsy", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_highBlood", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "highBlood", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_highBlood", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "highBlood", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_heartProblem", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "heartProblem", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_heartProblem", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "heartProblem", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_backpain", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "backpain", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_backpain", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "backpain", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_pregnancy", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "pregnancy", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_pregnancy", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "pregnancy", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_prescribedMedication", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "prescribedMedication", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_prescribedMedication", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "prescribedMedication", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_surgery", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "surgery", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_surgery", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "surgery", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_OYinternet", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "OYinternet", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_OYinternet", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "OYinternet", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_OYFlyer", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "OYFlyer", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_OYFlyer", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "OYFlyer", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_OYNewspaper", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "OYNewspaper", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_OYNewspaper", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "OYNewspaper", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_OYFriend", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "OYFriend", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_OYFriend", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "OYFriend", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_OYBrochure", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "OYBrochure", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_OYBrochure", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "OYBrochure", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_dateRegistered", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "dateRegistered", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_dateRegistered", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "dateRegistered", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
@@ -3143,7 +3398,7 @@ Namespace OYmembersTableAdapters
                 "hBlood, heartProblem, backpain, pregnancy, otherHealthCondition, prescribedMedic"& _ 
                 "ation, prescribedMedicationExplain, physicianOrHospitalCare, surgery, surgeryExp"& _ 
                 "lain, OYinternet, OYFlyer, OYNewspaper, OYFriend, OYBrochure, OYOthers, newspape"& _ 
-                "rExplain, friendExplain, dateRegistered FROM dbo.members"
+                "rExplain, friendExplain, dateRegistered, occupation, officeAddr2 FROM members"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -3214,19 +3469,19 @@ Namespace OYmembersTableAdapters
                     ByVal Original_otherContact As String,  _
                     ByVal Original_contactPersonNo As String,  _
                     ByVal Original_contactPersonRelationship As String,  _
-                    ByVal Original_asthma As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_epilepsy As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_highBlood As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_heartProblem As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_backpain As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_pregnancy As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_prescribedMedication As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_surgery As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_OYinternet As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_OYFlyer As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_OYNewspaper As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_OYFriend As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_OYBrochure As Global.System.Nullable(Of Boolean),  _
+                    ByVal Original_asthma As Boolean,  _
+                    ByVal Original_epilepsy As Boolean,  _
+                    ByVal Original_highBlood As Boolean,  _
+                    ByVal Original_heartProblem As Boolean,  _
+                    ByVal Original_backpain As Boolean,  _
+                    ByVal Original_pregnancy As Boolean,  _
+                    ByVal Original_prescribedMedication As Boolean,  _
+                    ByVal Original_surgery As Boolean,  _
+                    ByVal Original_OYinternet As Boolean,  _
+                    ByVal Original_OYFlyer As Boolean,  _
+                    ByVal Original_OYNewspaper As Boolean,  _
+                    ByVal Original_OYFriend As Boolean,  _
+                    ByVal Original_OYBrochure As Boolean,  _
                     ByVal Original_dateRegistered As Global.System.Nullable(Of Date)) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_memberID,Integer)
             If (Original_MI Is Nothing) Then
@@ -3292,103 +3547,25 @@ Namespace OYmembersTableAdapters
                 Me.Adapter.DeleteCommand.Parameters(17).Value = CType(0,Object)
                 Me.Adapter.DeleteCommand.Parameters(18).Value = CType(Original_contactPersonRelationship,String)
             End If
-            If (Original_asthma.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(19).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(20).Value = CType(Original_asthma.Value,Boolean)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(19).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(20).Value = Global.System.DBNull.Value
-            End If
-            If (Original_epilepsy.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(21).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(22).Value = CType(Original_epilepsy.Value,Boolean)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(21).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(22).Value = Global.System.DBNull.Value
-            End If
-            If (Original_highBlood.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(23).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(24).Value = CType(Original_highBlood.Value,Boolean)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(23).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(24).Value = Global.System.DBNull.Value
-            End If
-            If (Original_heartProblem.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(25).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(26).Value = CType(Original_heartProblem.Value,Boolean)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(25).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(26).Value = Global.System.DBNull.Value
-            End If
-            If (Original_backpain.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(27).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(28).Value = CType(Original_backpain.Value,Boolean)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(27).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(28).Value = Global.System.DBNull.Value
-            End If
-            If (Original_pregnancy.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(29).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(30).Value = CType(Original_pregnancy.Value,Boolean)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(29).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(30).Value = Global.System.DBNull.Value
-            End If
-            If (Original_prescribedMedication.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(31).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(32).Value = CType(Original_prescribedMedication.Value,Boolean)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(31).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(32).Value = Global.System.DBNull.Value
-            End If
-            If (Original_surgery.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(33).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(34).Value = CType(Original_surgery.Value,Boolean)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(33).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(34).Value = Global.System.DBNull.Value
-            End If
-            If (Original_OYinternet.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(35).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(36).Value = CType(Original_OYinternet.Value,Boolean)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(35).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(36).Value = Global.System.DBNull.Value
-            End If
-            If (Original_OYFlyer.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(37).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(38).Value = CType(Original_OYFlyer.Value,Boolean)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(37).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(38).Value = Global.System.DBNull.Value
-            End If
-            If (Original_OYNewspaper.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(39).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(40).Value = CType(Original_OYNewspaper.Value,Boolean)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(39).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(40).Value = Global.System.DBNull.Value
-            End If
-            If (Original_OYFriend.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(41).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(42).Value = CType(Original_OYFriend.Value,Boolean)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(41).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(42).Value = Global.System.DBNull.Value
-            End If
-            If (Original_OYBrochure.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(43).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(44).Value = CType(Original_OYBrochure.Value,Boolean)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(43).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(44).Value = Global.System.DBNull.Value
-            End If
+            Me.Adapter.DeleteCommand.Parameters(19).Value = CType(Original_asthma,Boolean)
+            Me.Adapter.DeleteCommand.Parameters(20).Value = CType(Original_epilepsy,Boolean)
+            Me.Adapter.DeleteCommand.Parameters(21).Value = CType(Original_highBlood,Boolean)
+            Me.Adapter.DeleteCommand.Parameters(22).Value = CType(Original_heartProblem,Boolean)
+            Me.Adapter.DeleteCommand.Parameters(23).Value = CType(Original_backpain,Boolean)
+            Me.Adapter.DeleteCommand.Parameters(24).Value = CType(Original_pregnancy,Boolean)
+            Me.Adapter.DeleteCommand.Parameters(25).Value = CType(Original_prescribedMedication,Boolean)
+            Me.Adapter.DeleteCommand.Parameters(26).Value = CType(Original_surgery,Boolean)
+            Me.Adapter.DeleteCommand.Parameters(27).Value = CType(Original_OYinternet,Boolean)
+            Me.Adapter.DeleteCommand.Parameters(28).Value = CType(Original_OYFlyer,Boolean)
+            Me.Adapter.DeleteCommand.Parameters(29).Value = CType(Original_OYNewspaper,Boolean)
+            Me.Adapter.DeleteCommand.Parameters(30).Value = CType(Original_OYFriend,Boolean)
+            Me.Adapter.DeleteCommand.Parameters(31).Value = CType(Original_OYBrochure,Boolean)
             If (Original_dateRegistered.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(45).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(46).Value = CType(Original_dateRegistered.Value,Date)
+                Me.Adapter.DeleteCommand.Parameters(32).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(33).Value = CType(Original_dateRegistered.Value,Date)
             Else
-                Me.Adapter.DeleteCommand.Parameters(45).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(46).Value = Global.System.DBNull.Value
+                Me.Adapter.DeleteCommand.Parameters(32).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(33).Value = Global.System.DBNull.Value
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -3427,27 +3604,29 @@ Namespace OYmembersTableAdapters
                     ByVal contactPersonNo As String,  _
                     ByVal contactPersonRelationship As String,  _
                     ByVal contactPersonAddr As String,  _
-                    ByVal asthma As Global.System.Nullable(Of Boolean),  _
-                    ByVal epilepsy As Global.System.Nullable(Of Boolean),  _
-                    ByVal highBlood As Global.System.Nullable(Of Boolean),  _
-                    ByVal heartProblem As Global.System.Nullable(Of Boolean),  _
-                    ByVal backpain As Global.System.Nullable(Of Boolean),  _
-                    ByVal pregnancy As Global.System.Nullable(Of Boolean),  _
+                    ByVal asthma As Boolean,  _
+                    ByVal epilepsy As Boolean,  _
+                    ByVal highBlood As Boolean,  _
+                    ByVal heartProblem As Boolean,  _
+                    ByVal backpain As Boolean,  _
+                    ByVal pregnancy As Boolean,  _
                     ByVal otherHealthCondition As String,  _
-                    ByVal prescribedMedication As Global.System.Nullable(Of Boolean),  _
+                    ByVal prescribedMedication As Boolean,  _
                     ByVal prescribedMedicationExplain As String,  _
                     ByVal physicianOrHospitalCare As String,  _
-                    ByVal surgery As Global.System.Nullable(Of Boolean),  _
+                    ByVal surgery As Boolean,  _
                     ByVal surgeryExplain As String,  _
-                    ByVal OYinternet As Global.System.Nullable(Of Boolean),  _
-                    ByVal OYFlyer As Global.System.Nullable(Of Boolean),  _
-                    ByVal OYNewspaper As Global.System.Nullable(Of Boolean),  _
-                    ByVal OYFriend As Global.System.Nullable(Of Boolean),  _
-                    ByVal OYBrochure As Global.System.Nullable(Of Boolean),  _
+                    ByVal OYinternet As Boolean,  _
+                    ByVal OYFlyer As Boolean,  _
+                    ByVal OYNewspaper As Boolean,  _
+                    ByVal OYFriend As Boolean,  _
+                    ByVal OYBrochure As Boolean,  _
                     ByVal OYOthers As String,  _
                     ByVal newspaperExplain As String,  _
                     ByVal friendExplain As String,  _
-                    ByVal dateRegistered As Global.System.Nullable(Of Date)) As Integer
+                    ByVal dateRegistered As Global.System.Nullable(Of Date),  _
+                    ByVal occupation As String,  _
+                    ByVal officeAddr2 As String) As Integer
             If (surname Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
@@ -3533,46 +3712,18 @@ Namespace OYmembersTableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(16).Value = CType(contactPersonAddr,String)
             End If
-            If (asthma.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(17).Value = CType(asthma.Value,Boolean)
-            Else
-                Me.Adapter.InsertCommand.Parameters(17).Value = Global.System.DBNull.Value
-            End If
-            If (epilepsy.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(18).Value = CType(epilepsy.Value,Boolean)
-            Else
-                Me.Adapter.InsertCommand.Parameters(18).Value = Global.System.DBNull.Value
-            End If
-            If (highBlood.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(19).Value = CType(highBlood.Value,Boolean)
-            Else
-                Me.Adapter.InsertCommand.Parameters(19).Value = Global.System.DBNull.Value
-            End If
-            If (heartProblem.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(20).Value = CType(heartProblem.Value,Boolean)
-            Else
-                Me.Adapter.InsertCommand.Parameters(20).Value = Global.System.DBNull.Value
-            End If
-            If (backpain.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(21).Value = CType(backpain.Value,Boolean)
-            Else
-                Me.Adapter.InsertCommand.Parameters(21).Value = Global.System.DBNull.Value
-            End If
-            If (pregnancy.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(22).Value = CType(pregnancy.Value,Boolean)
-            Else
-                Me.Adapter.InsertCommand.Parameters(22).Value = Global.System.DBNull.Value
-            End If
+            Me.Adapter.InsertCommand.Parameters(17).Value = CType(asthma,Boolean)
+            Me.Adapter.InsertCommand.Parameters(18).Value = CType(epilepsy,Boolean)
+            Me.Adapter.InsertCommand.Parameters(19).Value = CType(highBlood,Boolean)
+            Me.Adapter.InsertCommand.Parameters(20).Value = CType(heartProblem,Boolean)
+            Me.Adapter.InsertCommand.Parameters(21).Value = CType(backpain,Boolean)
+            Me.Adapter.InsertCommand.Parameters(22).Value = CType(pregnancy,Boolean)
             If (otherHealthCondition Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(23).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.InsertCommand.Parameters(23).Value = CType(otherHealthCondition,String)
             End If
-            If (prescribedMedication.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(24).Value = CType(prescribedMedication.Value,Boolean)
-            Else
-                Me.Adapter.InsertCommand.Parameters(24).Value = Global.System.DBNull.Value
-            End If
+            Me.Adapter.InsertCommand.Parameters(24).Value = CType(prescribedMedication,Boolean)
             If (prescribedMedicationExplain Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(25).Value = Global.System.DBNull.Value
             Else
@@ -3583,41 +3734,17 @@ Namespace OYmembersTableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(26).Value = CType(physicianOrHospitalCare,String)
             End If
-            If (surgery.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(27).Value = CType(surgery.Value,Boolean)
-            Else
-                Me.Adapter.InsertCommand.Parameters(27).Value = Global.System.DBNull.Value
-            End If
+            Me.Adapter.InsertCommand.Parameters(27).Value = CType(surgery,Boolean)
             If (surgeryExplain Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(28).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.InsertCommand.Parameters(28).Value = CType(surgeryExplain,String)
             End If
-            If (OYinternet.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(29).Value = CType(OYinternet.Value,Boolean)
-            Else
-                Me.Adapter.InsertCommand.Parameters(29).Value = Global.System.DBNull.Value
-            End If
-            If (OYFlyer.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(30).Value = CType(OYFlyer.Value,Boolean)
-            Else
-                Me.Adapter.InsertCommand.Parameters(30).Value = Global.System.DBNull.Value
-            End If
-            If (OYNewspaper.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(31).Value = CType(OYNewspaper.Value,Boolean)
-            Else
-                Me.Adapter.InsertCommand.Parameters(31).Value = Global.System.DBNull.Value
-            End If
-            If (OYFriend.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(32).Value = CType(OYFriend.Value,Boolean)
-            Else
-                Me.Adapter.InsertCommand.Parameters(32).Value = Global.System.DBNull.Value
-            End If
-            If (OYBrochure.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(33).Value = CType(OYBrochure.Value,Boolean)
-            Else
-                Me.Adapter.InsertCommand.Parameters(33).Value = Global.System.DBNull.Value
-            End If
+            Me.Adapter.InsertCommand.Parameters(29).Value = CType(OYinternet,Boolean)
+            Me.Adapter.InsertCommand.Parameters(30).Value = CType(OYFlyer,Boolean)
+            Me.Adapter.InsertCommand.Parameters(31).Value = CType(OYNewspaper,Boolean)
+            Me.Adapter.InsertCommand.Parameters(32).Value = CType(OYFriend,Boolean)
+            Me.Adapter.InsertCommand.Parameters(33).Value = CType(OYBrochure,Boolean)
             If (OYOthers Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(34).Value = Global.System.DBNull.Value
             Else
@@ -3637,6 +3764,16 @@ Namespace OYmembersTableAdapters
                 Me.Adapter.InsertCommand.Parameters(37).Value = CType(dateRegistered.Value,Date)
             Else
                 Me.Adapter.InsertCommand.Parameters(37).Value = Global.System.DBNull.Value
+            End If
+            If (occupation Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(38).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(38).Value = CType(occupation,String)
+            End If
+            If (officeAddr2 Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(39).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(39).Value = CType(officeAddr2,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -3675,27 +3812,29 @@ Namespace OYmembersTableAdapters
                     ByVal contactPersonNo As String,  _
                     ByVal contactPersonRelationship As String,  _
                     ByVal contactPersonAddr As String,  _
-                    ByVal asthma As Global.System.Nullable(Of Boolean),  _
-                    ByVal epilepsy As Global.System.Nullable(Of Boolean),  _
-                    ByVal highBlood As Global.System.Nullable(Of Boolean),  _
-                    ByVal heartProblem As Global.System.Nullable(Of Boolean),  _
-                    ByVal backpain As Global.System.Nullable(Of Boolean),  _
-                    ByVal pregnancy As Global.System.Nullable(Of Boolean),  _
+                    ByVal asthma As Boolean,  _
+                    ByVal epilepsy As Boolean,  _
+                    ByVal highBlood As Boolean,  _
+                    ByVal heartProblem As Boolean,  _
+                    ByVal backpain As Boolean,  _
+                    ByVal pregnancy As Boolean,  _
                     ByVal otherHealthCondition As String,  _
-                    ByVal prescribedMedication As Global.System.Nullable(Of Boolean),  _
+                    ByVal prescribedMedication As Boolean,  _
                     ByVal prescribedMedicationExplain As String,  _
                     ByVal physicianOrHospitalCare As String,  _
-                    ByVal surgery As Global.System.Nullable(Of Boolean),  _
+                    ByVal surgery As Boolean,  _
                     ByVal surgeryExplain As String,  _
-                    ByVal OYinternet As Global.System.Nullable(Of Boolean),  _
-                    ByVal OYFlyer As Global.System.Nullable(Of Boolean),  _
-                    ByVal OYNewspaper As Global.System.Nullable(Of Boolean),  _
-                    ByVal OYFriend As Global.System.Nullable(Of Boolean),  _
-                    ByVal OYBrochure As Global.System.Nullable(Of Boolean),  _
+                    ByVal OYinternet As Boolean,  _
+                    ByVal OYFlyer As Boolean,  _
+                    ByVal OYNewspaper As Boolean,  _
+                    ByVal OYFriend As Boolean,  _
+                    ByVal OYBrochure As Boolean,  _
                     ByVal OYOthers As String,  _
                     ByVal newspaperExplain As String,  _
                     ByVal friendExplain As String,  _
                     ByVal dateRegistered As Global.System.Nullable(Of Date),  _
+                    ByVal occupation As String,  _
+                    ByVal officeAddr2 As String,  _
                     ByVal Original_memberID As Integer,  _
                     ByVal Original_MI As String,  _
                     ByVal Original_nickname As String,  _
@@ -3706,19 +3845,19 @@ Namespace OYmembersTableAdapters
                     ByVal Original_otherContact As String,  _
                     ByVal Original_contactPersonNo As String,  _
                     ByVal Original_contactPersonRelationship As String,  _
-                    ByVal Original_asthma As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_epilepsy As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_highBlood As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_heartProblem As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_backpain As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_pregnancy As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_prescribedMedication As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_surgery As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_OYinternet As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_OYFlyer As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_OYNewspaper As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_OYFriend As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_OYBrochure As Global.System.Nullable(Of Boolean),  _
+                    ByVal Original_asthma As Boolean,  _
+                    ByVal Original_epilepsy As Boolean,  _
+                    ByVal Original_highBlood As Boolean,  _
+                    ByVal Original_heartProblem As Boolean,  _
+                    ByVal Original_backpain As Boolean,  _
+                    ByVal Original_pregnancy As Boolean,  _
+                    ByVal Original_prescribedMedication As Boolean,  _
+                    ByVal Original_surgery As Boolean,  _
+                    ByVal Original_OYinternet As Boolean,  _
+                    ByVal Original_OYFlyer As Boolean,  _
+                    ByVal Original_OYNewspaper As Boolean,  _
+                    ByVal Original_OYFriend As Boolean,  _
+                    ByVal Original_OYBrochure As Boolean,  _
                     ByVal Original_dateRegistered As Global.System.Nullable(Of Date),  _
                     ByVal memberID As Integer) As Integer
             If (surname Is Nothing) Then
@@ -3806,46 +3945,18 @@ Namespace OYmembersTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(16).Value = CType(contactPersonAddr,String)
             End If
-            If (asthma.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(asthma.Value,Boolean)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(17).Value = Global.System.DBNull.Value
-            End If
-            If (epilepsy.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(epilepsy.Value,Boolean)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(18).Value = Global.System.DBNull.Value
-            End If
-            If (highBlood.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(highBlood.Value,Boolean)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(19).Value = Global.System.DBNull.Value
-            End If
-            If (heartProblem.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(heartProblem.Value,Boolean)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(20).Value = Global.System.DBNull.Value
-            End If
-            If (backpain.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(backpain.Value,Boolean)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(21).Value = Global.System.DBNull.Value
-            End If
-            If (pregnancy.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(pregnancy.Value,Boolean)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(22).Value = Global.System.DBNull.Value
-            End If
+            Me.Adapter.UpdateCommand.Parameters(17).Value = CType(asthma,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(18).Value = CType(epilepsy,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(19).Value = CType(highBlood,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(20).Value = CType(heartProblem,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(21).Value = CType(backpain,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(22).Value = CType(pregnancy,Boolean)
             If (otherHealthCondition Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(23).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(23).Value = CType(otherHealthCondition,String)
             End If
-            If (prescribedMedication.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(prescribedMedication.Value,Boolean)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(24).Value = Global.System.DBNull.Value
-            End If
+            Me.Adapter.UpdateCommand.Parameters(24).Value = CType(prescribedMedication,Boolean)
             If (prescribedMedicationExplain Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(25).Value = Global.System.DBNull.Value
             Else
@@ -3856,41 +3967,17 @@ Namespace OYmembersTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(26).Value = CType(physicianOrHospitalCare,String)
             End If
-            If (surgery.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(surgery.Value,Boolean)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(27).Value = Global.System.DBNull.Value
-            End If
+            Me.Adapter.UpdateCommand.Parameters(27).Value = CType(surgery,Boolean)
             If (surgeryExplain Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(28).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(28).Value = CType(surgeryExplain,String)
             End If
-            If (OYinternet.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(OYinternet.Value,Boolean)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(29).Value = Global.System.DBNull.Value
-            End If
-            If (OYFlyer.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(OYFlyer.Value,Boolean)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(30).Value = Global.System.DBNull.Value
-            End If
-            If (OYNewspaper.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(OYNewspaper.Value,Boolean)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(31).Value = Global.System.DBNull.Value
-            End If
-            If (OYFriend.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(OYFriend.Value,Boolean)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(32).Value = Global.System.DBNull.Value
-            End If
-            If (OYBrochure.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(OYBrochure.Value,Boolean)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(33).Value = Global.System.DBNull.Value
-            End If
+            Me.Adapter.UpdateCommand.Parameters(29).Value = CType(OYinternet,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(30).Value = CType(OYFlyer,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(31).Value = CType(OYNewspaper,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(32).Value = CType(OYFriend,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(33).Value = CType(OYBrochure,Boolean)
             If (OYOthers Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(34).Value = Global.System.DBNull.Value
             Else
@@ -3911,169 +3998,101 @@ Namespace OYmembersTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(37).Value = Global.System.DBNull.Value
             End If
-            Me.Adapter.UpdateCommand.Parameters(38).Value = CType(Original_memberID,Integer)
-            If (Original_MI Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(39).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(40).Value = Global.System.DBNull.Value
+            If (occupation Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(38).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(39).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(40).Value = CType(Original_MI,String)
+                Me.Adapter.UpdateCommand.Parameters(38).Value = CType(occupation,String)
             End If
-            If (Original_nickname Is Nothing) Then
+            If (officeAddr2 Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(39).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(39).Value = CType(officeAddr2,String)
+            End If
+            Me.Adapter.UpdateCommand.Parameters(40).Value = CType(Original_memberID,Integer)
+            If (Original_MI Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(41).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(42).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(41).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(42).Value = CType(Original_nickname,String)
+                Me.Adapter.UpdateCommand.Parameters(42).Value = CType(Original_MI,String)
             End If
-            If (Original_zipcode Is Nothing) Then
+            If (Original_nickname Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(43).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(44).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(43).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(44).Value = CType(Original_zipcode,String)
+                Me.Adapter.UpdateCommand.Parameters(44).Value = CType(Original_nickname,String)
             End If
-            If (Original_birthdate.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(45).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(46).Value = CType(Original_birthdate.Value,Date)
-            Else
+            If (Original_zipcode Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(45).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(46).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(45).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(46).Value = CType(Original_zipcode,String)
             End If
-            If (Original_sex Is Nothing) Then
+            If (Original_birthdate.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(47).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(48).Value = CType(Original_birthdate.Value,Date)
+            Else
                 Me.Adapter.UpdateCommand.Parameters(47).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(48).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(47).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(48).Value = CType(Original_sex,String)
             End If
-            If (Original_mobileNo Is Nothing) Then
+            If (Original_sex Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(49).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(50).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(49).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(50).Value = CType(Original_mobileNo,String)
+                Me.Adapter.UpdateCommand.Parameters(50).Value = CType(Original_sex,String)
             End If
-            If (Original_otherContact Is Nothing) Then
+            If (Original_mobileNo Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(51).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(52).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(51).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(52).Value = CType(Original_otherContact,String)
+                Me.Adapter.UpdateCommand.Parameters(52).Value = CType(Original_mobileNo,String)
             End If
-            If (Original_contactPersonNo Is Nothing) Then
+            If (Original_otherContact Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(53).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(54).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(53).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(54).Value = CType(Original_contactPersonNo,String)
+                Me.Adapter.UpdateCommand.Parameters(54).Value = CType(Original_otherContact,String)
             End If
-            If (Original_contactPersonRelationship Is Nothing) Then
+            If (Original_contactPersonNo Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(55).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(56).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(55).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(56).Value = CType(Original_contactPersonRelationship,String)
+                Me.Adapter.UpdateCommand.Parameters(56).Value = CType(Original_contactPersonNo,String)
             End If
-            If (Original_asthma.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(57).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(58).Value = CType(Original_asthma.Value,Boolean)
-            Else
+            If (Original_contactPersonRelationship Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(57).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(58).Value = Global.System.DBNull.Value
-            End If
-            If (Original_epilepsy.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(59).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(60).Value = CType(Original_epilepsy.Value,Boolean)
             Else
-                Me.Adapter.UpdateCommand.Parameters(59).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(60).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(57).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(58).Value = CType(Original_contactPersonRelationship,String)
             End If
-            If (Original_highBlood.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(61).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(62).Value = CType(Original_highBlood.Value,Boolean)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(61).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(62).Value = Global.System.DBNull.Value
-            End If
-            If (Original_heartProblem.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(63).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(64).Value = CType(Original_heartProblem.Value,Boolean)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(63).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(64).Value = Global.System.DBNull.Value
-            End If
-            If (Original_backpain.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(65).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(66).Value = CType(Original_backpain.Value,Boolean)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(65).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(66).Value = Global.System.DBNull.Value
-            End If
-            If (Original_pregnancy.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(67).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(68).Value = CType(Original_pregnancy.Value,Boolean)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(67).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(68).Value = Global.System.DBNull.Value
-            End If
-            If (Original_prescribedMedication.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(69).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(70).Value = CType(Original_prescribedMedication.Value,Boolean)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(69).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(70).Value = Global.System.DBNull.Value
-            End If
-            If (Original_surgery.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(71).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(72).Value = CType(Original_surgery.Value,Boolean)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(71).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(72).Value = Global.System.DBNull.Value
-            End If
-            If (Original_OYinternet.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(73).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(74).Value = CType(Original_OYinternet.Value,Boolean)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(73).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(74).Value = Global.System.DBNull.Value
-            End If
-            If (Original_OYFlyer.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(75).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(76).Value = CType(Original_OYFlyer.Value,Boolean)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(75).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(76).Value = Global.System.DBNull.Value
-            End If
-            If (Original_OYNewspaper.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(77).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(78).Value = CType(Original_OYNewspaper.Value,Boolean)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(77).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(78).Value = Global.System.DBNull.Value
-            End If
-            If (Original_OYFriend.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(79).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(80).Value = CType(Original_OYFriend.Value,Boolean)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(79).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(80).Value = Global.System.DBNull.Value
-            End If
-            If (Original_OYBrochure.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(81).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(82).Value = CType(Original_OYBrochure.Value,Boolean)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(81).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(82).Value = Global.System.DBNull.Value
-            End If
+            Me.Adapter.UpdateCommand.Parameters(59).Value = CType(Original_asthma,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(60).Value = CType(Original_epilepsy,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(61).Value = CType(Original_highBlood,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(62).Value = CType(Original_heartProblem,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(63).Value = CType(Original_backpain,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(64).Value = CType(Original_pregnancy,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(65).Value = CType(Original_prescribedMedication,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(66).Value = CType(Original_surgery,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(67).Value = CType(Original_OYinternet,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(68).Value = CType(Original_OYFlyer,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(69).Value = CType(Original_OYNewspaper,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(70).Value = CType(Original_OYFriend,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(71).Value = CType(Original_OYBrochure,Boolean)
             If (Original_dateRegistered.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(83).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(84).Value = CType(Original_dateRegistered.Value,Date)
+                Me.Adapter.UpdateCommand.Parameters(72).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(73).Value = CType(Original_dateRegistered.Value,Date)
             Else
-                Me.Adapter.UpdateCommand.Parameters(83).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(84).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(72).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(73).Value = Global.System.DBNull.Value
             End If
-            Me.Adapter.UpdateCommand.Parameters(85).Value = CType(memberID,Integer)
+            Me.Adapter.UpdateCommand.Parameters(74).Value = CType(memberID,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -4111,27 +4130,29 @@ Namespace OYmembersTableAdapters
                     ByVal contactPersonNo As String,  _
                     ByVal contactPersonRelationship As String,  _
                     ByVal contactPersonAddr As String,  _
-                    ByVal asthma As Global.System.Nullable(Of Boolean),  _
-                    ByVal epilepsy As Global.System.Nullable(Of Boolean),  _
-                    ByVal highBlood As Global.System.Nullable(Of Boolean),  _
-                    ByVal heartProblem As Global.System.Nullable(Of Boolean),  _
-                    ByVal backpain As Global.System.Nullable(Of Boolean),  _
-                    ByVal pregnancy As Global.System.Nullable(Of Boolean),  _
+                    ByVal asthma As Boolean,  _
+                    ByVal epilepsy As Boolean,  _
+                    ByVal highBlood As Boolean,  _
+                    ByVal heartProblem As Boolean,  _
+                    ByVal backpain As Boolean,  _
+                    ByVal pregnancy As Boolean,  _
                     ByVal otherHealthCondition As String,  _
-                    ByVal prescribedMedication As Global.System.Nullable(Of Boolean),  _
+                    ByVal prescribedMedication As Boolean,  _
                     ByVal prescribedMedicationExplain As String,  _
                     ByVal physicianOrHospitalCare As String,  _
-                    ByVal surgery As Global.System.Nullable(Of Boolean),  _
+                    ByVal surgery As Boolean,  _
                     ByVal surgeryExplain As String,  _
-                    ByVal OYinternet As Global.System.Nullable(Of Boolean),  _
-                    ByVal OYFlyer As Global.System.Nullable(Of Boolean),  _
-                    ByVal OYNewspaper As Global.System.Nullable(Of Boolean),  _
-                    ByVal OYFriend As Global.System.Nullable(Of Boolean),  _
-                    ByVal OYBrochure As Global.System.Nullable(Of Boolean),  _
+                    ByVal OYinternet As Boolean,  _
+                    ByVal OYFlyer As Boolean,  _
+                    ByVal OYNewspaper As Boolean,  _
+                    ByVal OYFriend As Boolean,  _
+                    ByVal OYBrochure As Boolean,  _
                     ByVal OYOthers As String,  _
                     ByVal newspaperExplain As String,  _
                     ByVal friendExplain As String,  _
                     ByVal dateRegistered As Global.System.Nullable(Of Date),  _
+                    ByVal occupation As String,  _
+                    ByVal officeAddr2 As String,  _
                     ByVal Original_memberID As Integer,  _
                     ByVal Original_MI As String,  _
                     ByVal Original_nickname As String,  _
@@ -4142,21 +4163,344 @@ Namespace OYmembersTableAdapters
                     ByVal Original_otherContact As String,  _
                     ByVal Original_contactPersonNo As String,  _
                     ByVal Original_contactPersonRelationship As String,  _
-                    ByVal Original_asthma As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_epilepsy As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_highBlood As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_heartProblem As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_backpain As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_pregnancy As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_prescribedMedication As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_surgery As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_OYinternet As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_OYFlyer As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_OYNewspaper As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_OYFriend As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_OYBrochure As Global.System.Nullable(Of Boolean),  _
+                    ByVal Original_asthma As Boolean,  _
+                    ByVal Original_epilepsy As Boolean,  _
+                    ByVal Original_highBlood As Boolean,  _
+                    ByVal Original_heartProblem As Boolean,  _
+                    ByVal Original_backpain As Boolean,  _
+                    ByVal Original_pregnancy As Boolean,  _
+                    ByVal Original_prescribedMedication As Boolean,  _
+                    ByVal Original_surgery As Boolean,  _
+                    ByVal Original_OYinternet As Boolean,  _
+                    ByVal Original_OYFlyer As Boolean,  _
+                    ByVal Original_OYNewspaper As Boolean,  _
+                    ByVal Original_OYFriend As Boolean,  _
+                    ByVal Original_OYBrochure As Boolean,  _
                     ByVal Original_dateRegistered As Global.System.Nullable(Of Date)) As Integer
-            Return Me.Update(surname, firstname, MI, nickname, homeAddr, zipcode, officeAddr, birthdate, civilStatus, sex, mobileNo, otherContact, email, contactPerson, contactPersonNo, contactPersonRelationship, contactPersonAddr, asthma, epilepsy, highBlood, heartProblem, backpain, pregnancy, otherHealthCondition, prescribedMedication, prescribedMedicationExplain, physicianOrHospitalCare, surgery, surgeryExplain, OYinternet, OYFlyer, OYNewspaper, OYFriend, OYBrochure, OYOthers, newspaperExplain, friendExplain, dateRegistered, Original_memberID, Original_MI, Original_nickname, Original_zipcode, Original_birthdate, Original_sex, Original_mobileNo, Original_otherContact, Original_contactPersonNo, Original_contactPersonRelationship, Original_asthma, Original_epilepsy, Original_highBlood, Original_heartProblem, Original_backpain, Original_pregnancy, Original_prescribedMedication, Original_surgery, Original_OYinternet, Original_OYFlyer, Original_OYNewspaper, Original_OYFriend, Original_OYBrochure, Original_dateRegistered, Original_memberID)
+            Return Me.Update(surname, firstname, MI, nickname, homeAddr, zipcode, officeAddr, birthdate, civilStatus, sex, mobileNo, otherContact, email, contactPerson, contactPersonNo, contactPersonRelationship, contactPersonAddr, asthma, epilepsy, highBlood, heartProblem, backpain, pregnancy, otherHealthCondition, prescribedMedication, prescribedMedicationExplain, physicianOrHospitalCare, surgery, surgeryExplain, OYinternet, OYFlyer, OYNewspaper, OYFriend, OYBrochure, OYOthers, newspaperExplain, friendExplain, dateRegistered, occupation, officeAddr2, Original_memberID, Original_MI, Original_nickname, Original_zipcode, Original_birthdate, Original_sex, Original_mobileNo, Original_otherContact, Original_contactPersonNo, Original_contactPersonRelationship, Original_asthma, Original_epilepsy, Original_highBlood, Original_heartProblem, Original_backpain, Original_pregnancy, Original_prescribedMedication, Original_surgery, Original_OYinternet, Original_OYFlyer, Original_OYNewspaper, Original_OYFriend, Original_OYBrochure, Original_dateRegistered, Original_memberID)
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the connection and commands used to retrieve and save data.
+    '''</summary>
+    <Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
+     Global.System.ComponentModel.ToolboxItem(true),  _
+     Global.System.ComponentModel.DataObjectAttribute(true),  _
+     Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
+     Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+    Partial Public Class otherYogaMedicationTableAdapter
+        Inherits Global.System.ComponentModel.Component
+        
+        Private WithEvents _adapter As Global.System.Data.SqlClient.SqlDataAdapter
+        
+        Private _connection As Global.System.Data.SqlClient.SqlConnection
+        
+        Private _transaction As Global.System.Data.SqlClient.SqlTransaction
+        
+        Private _commandCollection() As Global.System.Data.SqlClient.SqlCommand
+        
+        Private _clearBeforeFill As Boolean
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.ClearBeforeFill = true
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Friend ReadOnly Property Adapter() As Global.System.Data.SqlClient.SqlDataAdapter
+            Get
+                If (Me._adapter Is Nothing) Then
+                    Me.InitAdapter
+                End If
+                Return Me._adapter
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Property Connection() As Global.System.Data.SqlClient.SqlConnection
+            Get
+                If (Me._connection Is Nothing) Then
+                    Me.InitConnection
+                End If
+                Return Me._connection
+            End Get
+            Set
+                Me._connection = value
+                If (Not (Me.Adapter.InsertCommand) Is Nothing) Then
+                    Me.Adapter.InsertCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.DeleteCommand) Is Nothing) Then
+                    Me.Adapter.DeleteCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.UpdateCommand) Is Nothing) Then
+                    Me.Adapter.UpdateCommand.Connection = value
+                End If
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    If (Not (Me.CommandCollection(i)) Is Nothing) Then
+                        CType(Me.CommandCollection(i),Global.System.Data.SqlClient.SqlCommand).Connection = value
+                    End If
+                    i = (i + 1)
+                Loop
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Property Transaction() As Global.System.Data.SqlClient.SqlTransaction
+            Get
+                Return Me._transaction
+            End Get
+            Set
+                Me._transaction = value
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    Me.CommandCollection(i).Transaction = Me._transaction
+                    i = (i + 1)
+                Loop
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.DeleteCommand) Is Nothing)) Then
+                    Me.Adapter.DeleteCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.InsertCommand) Is Nothing)) Then
+                    Me.Adapter.InsertCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.UpdateCommand) Is Nothing)) Then
+                    Me.Adapter.UpdateCommand.Transaction = Me._transaction
+                End If
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected ReadOnly Property CommandCollection() As Global.System.Data.SqlClient.SqlCommand()
+            Get
+                If (Me._commandCollection Is Nothing) Then
+                    Me.InitCommandCollection
+                End If
+                Return Me._commandCollection
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property ClearBeforeFill() As Boolean
+            Get
+                Return Me._clearBeforeFill
+            End Get
+            Set
+                Me._clearBeforeFill = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitAdapter()
+            Me._adapter = New Global.System.Data.SqlClient.SqlDataAdapter()
+            Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
+            tableMapping.SourceTable = "Table"
+            tableMapping.DataSetTable = "otherYogaMedication"
+            tableMapping.ColumnMappings.Add("Id", "Id")
+            tableMapping.ColumnMappings.Add("memberID", "memberID")
+            Me._adapter.TableMappings.Add(tableMapping)
+            Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
+            Me._adapter.DeleteCommand.Connection = Me.Connection
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[otherYogaMedication] WHERE (([Id] = @Original_Id) AND ((@IsNul"& _ 
+                "l_memberID = 1 AND [memberID] IS NULL) OR ([memberID] = @Original_memberID)))"
+            Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Id", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Id", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_memberID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "memberID", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_memberID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "memberID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
+            Me._adapter.InsertCommand.Connection = Me.Connection
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[otherYogaMedication] ([memberID]) VALUES (@memberID);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT "& _ 
+                "Id, memberID FROM otherYogaMedication WHERE (Id = SCOPE_IDENTITY())"
+            Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@memberID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "memberID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
+            Me._adapter.UpdateCommand.Connection = Me.Connection
+            Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[otherYogaMedication] SET [memberID] = @memberID WHERE (([Id] = @Ori"& _ 
+                "ginal_Id) AND ((@IsNull_memberID = 1 AND [memberID] IS NULL) OR ([memberID] = @O"& _ 
+                "riginal_memberID)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Id, memberID FROM otherYogaMedication WHERE (Id = @"& _ 
+                "Id)"
+            Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@memberID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "memberID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Id", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Id", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_memberID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "memberID", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_memberID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "memberID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Id", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Id", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitConnection()
+            Me._connection = New Global.System.Data.SqlClient.SqlConnection()
+            Me._connection.ConnectionString = Global.oneYoga.My.MySettings.Default.Database1ConnectionString
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitCommandCollection()
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(0).Connection = Me.Connection
+            Me._commandCollection(0).CommandText = "SELECT Id, memberID FROM dbo.otherYogaMedication"
+            Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
+        Public Overloads Overridable Function Fill(ByVal dataTable As OYmembers.otherYogaMedicationDataTable) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
+        Public Overloads Overridable Function GetData() As OYmembers.otherYogaMedicationDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            Dim dataTable As OYmembers.otherYogaMedicationDataTable = New OYmembers.otherYogaMedicationDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataTable As OYmembers.otherYogaMedicationDataTable) As Integer
+            Return Me.Adapter.Update(dataTable)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataSet As OYmembers) As Integer
+            Return Me.Adapter.Update(dataSet, "otherYogaMedication")
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataRow As Global.System.Data.DataRow) As Integer
+            Return Me.Adapter.Update(New Global.System.Data.DataRow() {dataRow})
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataRows() As Global.System.Data.DataRow) As Integer
+            Return Me.Adapter.Update(dataRows)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
+        Public Overloads Overridable Function Delete(ByVal Original_Id As Integer, ByVal Original_memberID As Global.System.Nullable(Of Integer)) As Integer
+            Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_Id,Integer)
+            If (Original_memberID.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_memberID.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(2).Value = Global.System.DBNull.Value
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
+            If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                Me.Adapter.DeleteCommand.Connection.Open
+            End If
+            Try 
+                Dim returnValue As Integer = Me.Adapter.DeleteCommand.ExecuteNonQuery
+                Return returnValue
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    Me.Adapter.DeleteCommand.Connection.Close
+                End If
+            End Try
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
+        Public Overloads Overridable Function Insert(ByVal memberID As Global.System.Nullable(Of Integer)) As Integer
+            If (memberID.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(0).Value = CType(memberID.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
+            If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                Me.Adapter.InsertCommand.Connection.Open
+            End If
+            Try 
+                Dim returnValue As Integer = Me.Adapter.InsertCommand.ExecuteNonQuery
+                Return returnValue
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    Me.Adapter.InsertCommand.Connection.Close
+                End If
+            End Try
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
+        Public Overloads Overridable Function Update(ByVal memberID As Global.System.Nullable(Of Integer), ByVal Original_Id As Integer, ByVal Original_memberID As Global.System.Nullable(Of Integer), ByVal Id As Integer) As Integer
+            If (memberID.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(memberID.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(0).Value = Global.System.DBNull.Value
+            End If
+            Me.Adapter.UpdateCommand.Parameters(1).Value = CType(Original_Id,Integer)
+            If (Original_memberID.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(Original_memberID.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
+            End If
+            Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Id,Integer)
+            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
+            If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                Me.Adapter.UpdateCommand.Connection.Open
+            End If
+            Try 
+                Dim returnValue As Integer = Me.Adapter.UpdateCommand.ExecuteNonQuery
+                Return returnValue
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    Me.Adapter.UpdateCommand.Connection.Close
+                End If
+            End Try
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
+        Public Overloads Overridable Function Update(ByVal memberID As Global.System.Nullable(Of Integer), ByVal Original_Id As Integer, ByVal Original_memberID As Global.System.Nullable(Of Integer)) As Integer
+            Return Me.Update(memberID, Original_Id, Original_memberID, Original_Id)
         End Function
     End Class
     
@@ -4505,6 +4849,8 @@ Namespace OYmembersTableAdapters
         
         Private _membersTableAdapter As membersTableAdapter
         
+        Private _otherYogaMedicationTableAdapter As otherYogaMedicationTableAdapter
+        
         Private _usersTableAdapter As usersTableAdapter
         
         Private _backupDataSetBeforeUpdate As Boolean
@@ -4533,6 +4879,20 @@ Namespace OYmembersTableAdapters
             End Get
             Set
                 Me._membersTableAdapter = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso"& _ 
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3"& _ 
+            "a", "System.Drawing.Design.UITypeEditor")>  _
+        Public Property otherYogaMedicationTableAdapter() As otherYogaMedicationTableAdapter
+            Get
+                Return Me._otherYogaMedicationTableAdapter
+            End Get
+            Set
+                Me._otherYogaMedicationTableAdapter = value
             End Set
         End Property
         
@@ -4573,6 +4933,10 @@ Namespace OYmembersTableAdapters
                             AndAlso (Not (Me._membersTableAdapter.Connection) Is Nothing)) Then
                     Return Me._membersTableAdapter.Connection
                 End If
+                If ((Not (Me._otherYogaMedicationTableAdapter) Is Nothing)  _
+                            AndAlso (Not (Me._otherYogaMedicationTableAdapter.Connection) Is Nothing)) Then
+                    Return Me._otherYogaMedicationTableAdapter.Connection
+                End If
                 If ((Not (Me._usersTableAdapter) Is Nothing)  _
                             AndAlso (Not (Me._usersTableAdapter.Connection) Is Nothing)) Then
                     Return Me._usersTableAdapter.Connection
@@ -4591,6 +4955,9 @@ Namespace OYmembersTableAdapters
             Get
                 Dim count As Integer = 0
                 If (Not (Me._membersTableAdapter) Is Nothing) Then
+                    count = (count + 1)
+                End If
+                If (Not (Me._otherYogaMedicationTableAdapter) Is Nothing) Then
                     count = (count + 1)
                 End If
                 If (Not (Me._usersTableAdapter) Is Nothing) Then
@@ -4613,6 +4980,15 @@ Namespace OYmembersTableAdapters
                 If ((Not (updatedRows) Is Nothing)  _
                             AndAlso (0 < updatedRows.Length)) Then
                     result = (result + Me._membersTableAdapter.Update(updatedRows))
+                    allChangedRows.AddRange(updatedRows)
+                End If
+            End If
+            If (Not (Me._otherYogaMedicationTableAdapter) Is Nothing) Then
+                Dim updatedRows() As Global.System.Data.DataRow = dataSet.otherYogaMedication.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
+                updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
+                If ((Not (updatedRows) Is Nothing)  _
+                            AndAlso (0 < updatedRows.Length)) Then
+                    result = (result + Me._otherYogaMedicationTableAdapter.Update(updatedRows))
                     allChangedRows.AddRange(updatedRows)
                 End If
             End If
@@ -4643,6 +5019,14 @@ Namespace OYmembersTableAdapters
                     allAddedRows.AddRange(addedRows)
                 End If
             End If
+            If (Not (Me._otherYogaMedicationTableAdapter) Is Nothing) Then
+                Dim addedRows() As Global.System.Data.DataRow = dataSet.otherYogaMedication.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
+                If ((Not (addedRows) Is Nothing)  _
+                            AndAlso (0 < addedRows.Length)) Then
+                    result = (result + Me._otherYogaMedicationTableAdapter.Update(addedRows))
+                    allAddedRows.AddRange(addedRows)
+                End If
+            End If
             If (Not (Me._usersTableAdapter) Is Nothing) Then
                 Dim addedRows() As Global.System.Data.DataRow = dataSet.users.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
                 If ((Not (addedRows) Is Nothing)  _
@@ -4666,6 +5050,14 @@ Namespace OYmembersTableAdapters
                 If ((Not (deletedRows) Is Nothing)  _
                             AndAlso (0 < deletedRows.Length)) Then
                     result = (result + Me._usersTableAdapter.Update(deletedRows))
+                    allChangedRows.AddRange(deletedRows)
+                End If
+            End If
+            If (Not (Me._otherYogaMedicationTableAdapter) Is Nothing) Then
+                Dim deletedRows() As Global.System.Data.DataRow = dataSet.otherYogaMedication.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
+                If ((Not (deletedRows) Is Nothing)  _
+                            AndAlso (0 < deletedRows.Length)) Then
+                    result = (result + Me._otherYogaMedicationTableAdapter.Update(deletedRows))
                     allChangedRows.AddRange(deletedRows)
                 End If
             End If
@@ -4723,6 +5115,11 @@ Namespace OYmembersTableAdapters
                 Throw New Global.System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s"& _ 
                         "tring.")
             End If
+            If ((Not (Me._otherYogaMedicationTableAdapter) Is Nothing)  _
+                        AndAlso (Me.MatchTableAdapterConnection(Me._otherYogaMedicationTableAdapter.Connection) = false)) Then
+                Throw New Global.System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s"& _ 
+                        "tring.")
+            End If
             If ((Not (Me._usersTableAdapter) Is Nothing)  _
                         AndAlso (Me.MatchTableAdapterConnection(Me._usersTableAdapter.Connection) = false)) Then
                 Throw New Global.System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s"& _ 
@@ -4767,6 +5164,15 @@ Namespace OYmembersTableAdapters
                     If Me._membersTableAdapter.Adapter.AcceptChangesDuringUpdate Then
                         Me._membersTableAdapter.Adapter.AcceptChangesDuringUpdate = false
                         adaptersWithAcceptChangesDuringUpdate.Add(Me._membersTableAdapter.Adapter)
+                    End If
+                End If
+                If (Not (Me._otherYogaMedicationTableAdapter) Is Nothing) Then
+                    revertConnections.Add(Me._otherYogaMedicationTableAdapter, Me._otherYogaMedicationTableAdapter.Connection)
+                    Me._otherYogaMedicationTableAdapter.Connection = CType(workConnection,Global.System.Data.SqlClient.SqlConnection)
+                    Me._otherYogaMedicationTableAdapter.Transaction = CType(workTransaction,Global.System.Data.SqlClient.SqlTransaction)
+                    If Me._otherYogaMedicationTableAdapter.Adapter.AcceptChangesDuringUpdate Then
+                        Me._otherYogaMedicationTableAdapter.Adapter.AcceptChangesDuringUpdate = false
+                        adaptersWithAcceptChangesDuringUpdate.Add(Me._otherYogaMedicationTableAdapter.Adapter)
                     End If
                 End If
                 If (Not (Me._usersTableAdapter) Is Nothing) Then
@@ -4841,6 +5247,10 @@ Namespace OYmembersTableAdapters
                 If (Not (Me._membersTableAdapter) Is Nothing) Then
                     Me._membersTableAdapter.Connection = CType(revertConnections(Me._membersTableAdapter),Global.System.Data.SqlClient.SqlConnection)
                     Me._membersTableAdapter.Transaction = Nothing
+                End If
+                If (Not (Me._otherYogaMedicationTableAdapter) Is Nothing) Then
+                    Me._otherYogaMedicationTableAdapter.Connection = CType(revertConnections(Me._otherYogaMedicationTableAdapter),Global.System.Data.SqlClient.SqlConnection)
+                    Me._otherYogaMedicationTableAdapter.Transaction = Nothing
                 End If
                 If (Not (Me._usersTableAdapter) Is Nothing) Then
                     Me._usersTableAdapter.Connection = CType(revertConnections(Me._usersTableAdapter),Global.System.Data.SqlClient.SqlConnection)
