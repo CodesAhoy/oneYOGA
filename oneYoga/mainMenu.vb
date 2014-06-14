@@ -18,7 +18,9 @@
     End Sub
 
     Private Sub ClassScheduleButton_Click(sender As Object, e As EventArgs) Handles ClassScheduleButton.Click
-        MsgBox("Feature Coming Soon!", 0, "One Yoga")
+        'MsgBox("Feature Coming Soon!", 0, "One Yoga")
+        Me.Enabled = False
+        Classes.Show()
     End Sub
 
     Private Sub SalesButton_Click(sender As Object, e As EventArgs) Handles SalesButton.Click

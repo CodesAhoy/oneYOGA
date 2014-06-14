@@ -93,6 +93,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddSubjectForm.Designer.vb">
+      <DependentUpon>AddSubjectForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddSubjectForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CodeFile1.vb" />
     <Compile Include="mainMenu.Designer.vb">
       <DependentUpon>mainMenu.vb</DependentUpon>
@@ -110,6 +116,18 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Classes.Designer.vb">
+      <DependentUpon>Classes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Classes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\classSchedule.Designer.vb">
+      <DependentUpon>classSchedule.vb</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\classSchedule.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\loginForm.Designer.vb">
       <DependentUpon>loginForm.vb</DependentUpon>
@@ -138,13 +156,34 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>OYmembers.xsd</DependentUpon>
     </Compile>
+    <Compile Include="timePickerDialog.Designer.vb">
+      <DependentUpon>timePickerDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="timePickerDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimePickerStartDialog.Designer.vb">
+      <DependentUpon>TimePickerStartDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TimePickerStartDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AddSubjectForm.resx">
+      <DependentUpon>AddSubjectForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="mainMenu.resx">
       <DependentUpon>mainMenu.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="membersRegistration.resx">
       <DependentUpon>membersRegistration.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Classes.resx">
+      <DependentUpon>Classes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\classSchedule.resx">
+      <DependentUpon>classSchedule.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\loginForm.resx">
       <DependentUpon>loginForm.vb</DependentUpon>
@@ -157,6 +196,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\results.resx">
       <DependentUpon>results.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="timePickerDialog.resx">
+      <DependentUpon>timePickerDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimePickerStartDialog.resx">
+      <DependentUpon>TimePickerStartDialog.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
