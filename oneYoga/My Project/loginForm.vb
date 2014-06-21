@@ -1,4 +1,5 @@
 ﻿Imports System.Data.SqlClient
+
 Public Class loginForm
 
     ' TODO: Insert code to perform custom authentication using the provided username and password 
@@ -15,21 +16,19 @@ Public Class loginForm
     Dim con As SqlConnection = New SqlConnection("Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\user\Source\Repos\oneYOGA\oneYoga\bin\Debug\Database1.mdf;Integrated Security=True;Connect Timeout=30")
 
     Private Sub OK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK.Click
+        Me.Hide()
         Dim word As String
         cmd = New SqlCommand("SELECT * FROM users Where username='" & UsernameTextBox.Text & "'" & " AND password = '" & PasswordTextBox.Text & "'", con)
         If con.State = ConnectionState.Closed Then con.Open()
         Dim sdr As SqlDataReader = cmd.ExecuteReader()
         If sdr.Read = True Then
+            'loading.Show()
             word = sdr.Item(3)
             sdr.Close()
             UsernameTextBox.Clear()
             PasswordTextBox.Clear()
-            'results.Show()
-            'MsgBox(word)
             mainMenu.userName = word
             mainMenu.Show()
-
-            Me.Hide()
         Else
             MsgBox("Invalid username or password!")
             sdr.Close()
@@ -43,6 +42,7 @@ Public Class loginForm
     Private Sub Cancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cancel.Click
         Me.Close()
     End Sub
+
 
 
 

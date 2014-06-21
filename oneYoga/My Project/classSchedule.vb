@@ -51,11 +51,15 @@ Public Class classSchedule
 
 
     Private Sub classSchedule_Shown(sender As Object, e As EventArgs) Handles Me.Shown
-        Me.SubjectsBindingSource.Sort = "subject ASC"
-        Me.ClassScheduleBindingSource.AddNew()
-
-        Me.classComboBox.SelectedIndex = 0
-        preliminaries()
+        If Me.SubjectsBindingSource.Count > 0 Then
+            Me.SubjectsBindingSource.Sort = "subject ASC"
+            Me.classComboBox.SelectedIndex = 0
+            Me.ClassScheduleBindingSource.AddNew()
+            preliminaries()
+        Else
+            Me.Close()
+            MsgBox("There are no subjects in the database!", 1, "Error")
+        End If
     End Sub
 
     Private Function preliminaries()

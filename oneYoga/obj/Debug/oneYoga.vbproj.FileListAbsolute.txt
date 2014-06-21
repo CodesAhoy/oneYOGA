@@ -23,3 +23,5 @@ C:\Users\user\Source\Repos\oneYoga\oneYoga\obj\Debug\oneYoga.timePickerDialog.re
 C:\Users\user\Source\Repos\oneYoga\oneYoga\obj\Debug\oneYoga.TimePickerStartDialog.resources
 C:\Users\user\Source\Repos\oneYoga\oneYoga\obj\Debug\oneYoga.Classes.resources
 C:\Users\user\Source\Repos\oneYoga\oneYoga\obj\Debug\oneYoga.AddSubjectForm.resources
+C:\Users\user\Source\Repos\oneYoga\oneYoga\obj\Debug\oneYoga.loginSplashScreen.resources
+C:\Users\user\Source\Repos\oneYoga\oneYoga\obj\Debug\oneYoga.searchSubjects.resources

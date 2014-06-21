@@ -49,4 +49,5 @@
         loginForm.Show()
         loginForm.UsernameTextBox.Focus()
     End Sub
+
 End Class

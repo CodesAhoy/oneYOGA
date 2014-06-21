@@ -13,4 +13,10 @@
         Me.Enabled = False
         AddSubjectForm.Show()
     End Sub
+
+    Private Sub ViewSubjectsButton_Click(sender As Object, e As EventArgs) Handles ViewSubjectsButton.Click
+        Me.Enabled = False
+        searchSubjects.Show()
+
+    End Sub
 End Class
