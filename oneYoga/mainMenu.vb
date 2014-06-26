@@ -13,7 +13,9 @@
     End Sub
 
     Private Sub ViewMembersButton_Click(sender As Object, e As EventArgs) Handles ViewMembersButton.Click
-        results.Show()
+        searchMembers.Show()
+        Me.Enabled = False
+        'results.Show()
 
     End Sub
 

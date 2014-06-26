@@ -13,8 +13,8 @@ Public Class loginForm
     Dim cmd As SqlCommand
     Dim myDA As SqlDataAdapter
     Dim myDataSet As DataSet
-    Dim con As SqlConnection = New SqlConnection("Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\user\Source\Repos\oneYOGA\oneYoga\bin\Debug\Database1.mdf;Integrated Security=True;Connect Timeout=30")
-
+    Dim con As SqlConnection = New SqlConnection("Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|Database1.mdf;Integrated Security=True;Connect Timeout=30")
+    'C:\Users\user\Source\Repos\oneYOGA\oneYoga\bin\Debug\
     Private Sub OK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK.Click
         Me.Hide()
         Dim word As String
@@ -32,6 +32,7 @@ Public Class loginForm
         Else
             MsgBox("Invalid username or password!")
             sdr.Close()
+            Me.Show()
         End If
         'While sdr.Read = True
         '   MsgBox(sdr.Item("name") & " " & sdr.Item("password") & sdr.Item("name"))

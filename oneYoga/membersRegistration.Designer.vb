@@ -109,6 +109,7 @@ Partial Class membersRegistration
         Me.SaveButton = New System.Windows.Forms.Button()
         Me.CloseButton = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.OYmembers1 = New oneYoga.OYmembers()
         MemberIDLabel = New System.Windows.Forms.Label()
         SurnameLabel = New System.Windows.Forms.Label()
         FirstnameLabel = New System.Windows.Forms.Label()
@@ -144,6 +145,7 @@ Partial Class membersRegistration
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
+        CType(Me.OYmembers1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MemberIDLabel
@@ -889,6 +891,7 @@ Partial Class membersRegistration
         '
         'SexComboBox
         '
+        Me.SexComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MembersBindingSource, "sex", True))
         Me.SexComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.SexComboBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SexComboBox.FormattingEnabled = True
@@ -909,7 +912,7 @@ Partial Class membersRegistration
         '
         'StatusComboBox
         '
-        Me.StatusComboBox.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.MembersBindingSource, "civilStatus", True))
+        Me.StatusComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MembersBindingSource, "civilStatus", True))
         Me.StatusComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.StatusComboBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.StatusComboBox.FormattingEnabled = True
@@ -926,8 +929,11 @@ Partial Class membersRegistration
         'TableAdapterManager
         '
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.classScheduleTableAdapter = Nothing
+        Me.TableAdapterManager.gendersTableAdapter = Nothing
         Me.TableAdapterManager.membersTableAdapter = Me.MembersTableAdapter
         Me.TableAdapterManager.otherYogaMedicationTableAdapter = Nothing
+        Me.TableAdapterManager.subjectsTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = oneYoga.OYmembersTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.usersTableAdapter = Nothing
         '
@@ -1025,6 +1031,11 @@ Partial Class membersRegistration
         Me.Panel2.Size = New System.Drawing.Size(887, 18)
         Me.Panel2.TabIndex = 87
         '
+        'OYmembers1
+        '
+        Me.OYmembers1.DataSetName = "OYmembers"
+        Me.OYmembers1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'membersRegistration
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1054,6 +1065,7 @@ Partial Class membersRegistration
         Me.GroupBox2.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
+        CType(Me.OYmembers1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1114,4 +1126,5 @@ Partial Class membersRegistration
     Friend WithEvents SaveButton As System.Windows.Forms.Button
     Friend WithEvents CloseButton As System.Windows.Forms.Button
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
+    Friend WithEvents OYmembers1 As oneYoga.OYmembers
 End Class

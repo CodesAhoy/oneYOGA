@@ -2,7 +2,7 @@
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
-    <PublishUrl>publish\</PublishUrl>
+    <PublishUrl>C:\Users\user\Desktop\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -12,10 +12,23 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.1.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>8B8BCE0B80AABC770247E9AEB83B86A4261ED7DC</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>oneYoga_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -163,6 +176,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>OYmembers.xsd</DependentUpon>
     </Compile>
+    <Compile Include="searchMembers.Designer.vb">
+      <DependentUpon>searchMembers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="searchMembers.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="searchSubjects.Designer.vb">
       <DependentUpon>searchSubjects.vb</DependentUpon>
     </Compile>
@@ -212,6 +231,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\results.resx">
       <DependentUpon>results.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="searchMembers.resx">
+      <DependentUpon>searchMembers.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="searchSubjects.resx">
       <DependentUpon>searchSubjects.vb</DependentUpon>
@@ -267,6 +289,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
+    <None Include="oneYoga_TemporaryKey.pfx" />
     <None Include="OYmembers.xsc">
       <DependentUpon>OYmembers.xsd</DependentUpon>
     </None>

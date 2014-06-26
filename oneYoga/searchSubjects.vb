@@ -4,7 +4,7 @@ Public Class searchSubjects
     Dim cmd As SqlCommand
     Dim myDA As SqlDataAdapter
     Dim myDataSet As DataSet
-    Dim con As SqlConnection = New SqlConnection("Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\user\Source\Repos\oneYOGA\oneYoga\bin\Debug\Database1.mdf;Integrated Security=True;Connect Timeout=30")
+    Dim con As SqlConnection = New SqlConnection("Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|Database1.mdf;Integrated Security=True;Connect Timeout=30")
 
     Private Sub searchSubjects_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
         Classes.Enabled = True
@@ -100,18 +100,23 @@ Public Class searchSubjects
     End Sub
 
     Private Sub DeleteSubjButton_Click(sender As Object, e As EventArgs) Handles DeleteSubjButton.Click
-        Try
-            Me.SubjectsBindingSource.Remove(Me.SubjectsBindingSource.Current)
-            Me.SubjectsBindingSource.EndEdit()
-            Me.TableAdapterManager.UpdateAll(Me.OYmembers)
-            RefreshList()
-            MsgBox("Subject deleted!")
-            disableComponents()
-        Catch ex As Exception
-            MsgBox(ex.Message)
-            disableComponents()
-            EditSubjButton.Enabled = False
-        End Try
+        Dim result As Integer = MessageBox.Show("Delete subject record?", "Delete Subject Record", MessageBoxButtons.YesNo)
+        If result = DialogResult.No Then
+
+        ElseIf result = DialogResult.Yes Then
+            Try
+                Me.SubjectsBindingSource.Remove(Me.SubjectsBindingSource.Current)
+                Me.SubjectsBindingSource.EndEdit()
+                Me.TableAdapterManager.UpdateAll(Me.OYmembers)
+                RefreshList()
+                MsgBox("Subject deleted!")
+                disableComponents()
+            Catch ex As Exception
+                MsgBox(ex.Message)
+                disableComponents()
+                EditSubjButton.Enabled = False
+            End Try
+        End If
     End Sub
 
     Private Sub SubjectsBindingSource_PositionChanged(sender As Object, e As EventArgs) Handles SubjectsBindingSource.PositionChanged

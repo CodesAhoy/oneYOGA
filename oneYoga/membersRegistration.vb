@@ -12,6 +12,8 @@
     End Sub
 
     Private Sub membersRegistration_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'OYmembers1.genders' table. You can move, or remove it, as needed.
+
         'TODO: This line of code loads data into the 'OYmembers.members' table. You can move, or remove it, as needed.
         'Me.MembersTableAdapter.Fill(Me.OYmembers.members)
 
@@ -28,7 +30,10 @@
     End Sub
 
     Private Sub SaveButton_Click(sender As Object, e As EventArgs) Handles SaveButton.Click
+        Dim sexString As String
         Try
+            sexString = Me.SexComboBox.Text
+
             Me.Validate()
             Me.MembersBindingSource.EndEdit()
             Me.TableAdapterManager.UpdateAll(Me.OYmembers)
