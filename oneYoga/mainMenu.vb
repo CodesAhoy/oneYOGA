@@ -55,7 +55,8 @@
     End Sub
 
     Private Sub EnrollMenuButton_Click(sender As Object, e As EventArgs) Handles EnrollMenuButton.Click
-        MsgBox("Feature Coming Soon!", 0, "One Yoga")
+        selectStudentToEnrollMenuForm.Show()
+        Me.Enabled = False
     End Sub
 
     Private Sub RatesButton_Click(sender As Object, e As EventArgs) Handles RatesButton.Click

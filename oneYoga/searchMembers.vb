@@ -71,4 +71,8 @@
             End If
         End If
     End Sub
+
+    Private Sub membersDataGrid_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles membersDataGrid.CellContentClick
+
+    End Sub
 End Class

@@ -126,6 +126,12 @@
     </Compile>
     <Compile Include="ApplicationEvents.vb" />
     <Compile Include="CodeFile1.vb" />
+    <Compile Include="enrollMenuForm.Designer.vb">
+      <DependentUpon>enrollMenuForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="enrollMenuForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Enrolment.Designer.vb">
       <DependentUpon>Enrolment.vb</DependentUpon>
     </Compile>
@@ -136,6 +142,12 @@
       <DependentUpon>loginSplashScreen.vb</DependentUpon>
     </Compile>
     <Compile Include="loginSplashScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainEnrolmentForm.Designer.vb">
+      <DependentUpon>mainEnrolmentForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="mainEnrolmentForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="mainMenu.Designer.vb">
@@ -218,6 +230,12 @@
     <Compile Include="searchSubjects.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="selectClassToEnrollForm.Designer.vb">
+      <DependentUpon>selectClassToEnrollForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="selectClassToEnrollForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="teachersMenuForm.Designer.vb">
       <DependentUpon>teachersMenuForm.vb</DependentUpon>
     </Compile>
@@ -247,11 +265,17 @@
     <EmbeddedResource Include="AddSubjectForm.resx">
       <DependentUpon>AddSubjectForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="enrollMenuForm.resx">
+      <DependentUpon>enrollMenuForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Enrolment.resx">
       <DependentUpon>Enrolment.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="loginSplashScreen.resx">
       <DependentUpon>loginSplashScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainEnrolmentForm.resx">
+      <DependentUpon>mainEnrolmentForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mainMenu.resx">
       <DependentUpon>mainMenu.vb</DependentUpon>
@@ -288,6 +312,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="searchSubjects.resx">
       <DependentUpon>searchSubjects.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="selectClassToEnrollForm.resx">
+      <DependentUpon>selectClassToEnrollForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="teachersMenuForm.resx">
       <DependentUpon>teachersMenuForm.vb</DependentUpon>

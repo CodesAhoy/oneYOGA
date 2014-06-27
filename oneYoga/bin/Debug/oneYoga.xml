@@ -47,15 +47,19 @@ Represents the strongly named DataTable class.
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:oneYoga.OYmembers.memberAccountDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
 </member><member name="T:oneYoga.OYmembers.ratesDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
 </member><member name="T:oneYoga.OYmembers.teachersDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:oneYoga.OYmembers.memberClassDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:oneYoga.OYmembers.memberScheduleDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
@@ -83,15 +87,19 @@ Represents strongly named DataRow class.
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:oneYoga.OYmembers.memberAccountRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
 </member><member name="T:oneYoga.OYmembers.ratesRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
 </member><member name="T:oneYoga.OYmembers.teachersRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:oneYoga.OYmembers.memberClassRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:oneYoga.OYmembers.memberScheduleRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
@@ -119,15 +127,19 @@ Row event argument class
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:oneYoga.OYmembers.memberAccountRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
 </member><member name="T:oneYoga.OYmembers.ratesRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
 </member><member name="T:oneYoga.OYmembers.teachersRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:oneYoga.OYmembers.memberClassRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:oneYoga.OYmembers.memberScheduleRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
@@ -159,15 +171,19 @@ Represents the connection and commands used to retrieve and save data.
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:oneYoga.OYmembersTableAdapters.memberAccountTableAdapter">
-	<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
 </member><member name="T:oneYoga.OYmembersTableAdapters.ratesTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
 </member><member name="T:oneYoga.OYmembersTableAdapters.teachersTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:oneYoga.OYmembersTableAdapters.memberClassTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:oneYoga.OYmembersTableAdapters.memberScheduleTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>

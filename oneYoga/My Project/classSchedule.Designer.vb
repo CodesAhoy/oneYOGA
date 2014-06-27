@@ -304,7 +304,6 @@ Partial Class classSchedule
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.classScheduleTableAdapter = Me.ClassScheduleTableAdapter
         Me.TableAdapterManager.gendersTableAdapter = Nothing
-        Me.TableAdapterManager.memberAccountTableAdapter = Nothing
         Me.TableAdapterManager.membersTableAdapter = Nothing
         Me.TableAdapterManager.otherYogaMedicationTableAdapter = Nothing
         Me.TableAdapterManager.ratesTableAdapter = Nothing

@@ -28,18 +28,18 @@ Partial Class searchMembers
         Me.FirstnameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MIDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.memberID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MembersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.OYmembers = New oneYoga.OYmembers()
         Me.membersContextMenuStrip = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.OpenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeleteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MembersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.OYmembers = New oneYoga.OYmembers()
         Me.MembersTableAdapter = New oneYoga.OYmembersTableAdapters.membersTableAdapter()
         Me.openMemberDataButton = New System.Windows.Forms.Button()
         Me.CloseSearchMembersButton = New System.Windows.Forms.Button()
         CType(Me.membersDataGrid, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.membersContextMenuStrip.SuspendLayout()
         CType(Me.MembersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.OYmembers, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.membersContextMenuStrip.SuspendLayout()
         Me.SuspendLayout()
         '
         'membersDataGrid
@@ -92,6 +92,16 @@ Partial Class searchMembers
         Me.memberID.Name = "memberID"
         Me.memberID.ReadOnly = True
         '
+        'MembersBindingSource
+        '
+        Me.MembersBindingSource.DataMember = "members"
+        Me.MembersBindingSource.DataSource = Me.OYmembers
+        '
+        'OYmembers
+        '
+        Me.OYmembers.DataSetName = "OYmembers"
+        Me.OYmembers.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'membersContextMenuStrip
         '
         Me.membersContextMenuStrip.AccessibleRole = System.Windows.Forms.AccessibleRole.Cell
@@ -110,16 +120,6 @@ Partial Class searchMembers
         Me.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
         Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
         Me.DeleteToolStripMenuItem.Text = "Delete"
-        '
-        'MembersBindingSource
-        '
-        Me.MembersBindingSource.DataMember = "members"
-        Me.MembersBindingSource.DataSource = Me.OYmembers
-        '
-        'OYmembers
-        '
-        Me.OYmembers.DataSetName = "OYmembers"
-        Me.OYmembers.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'MembersTableAdapter
         '
@@ -155,9 +155,9 @@ Partial Class searchMembers
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "One Yoga - Search Members"
         CType(Me.membersDataGrid, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.membersContextMenuStrip.ResumeLayout(False)
         CType(Me.MembersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.OYmembers, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.membersContextMenuStrip.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub

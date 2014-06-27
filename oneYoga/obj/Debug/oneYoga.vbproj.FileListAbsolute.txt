@@ -18,7 +18,6 @@ C:\Users\user\Source\Repos\oneYOGA\oneYoga\obj\Debug\oneYoga.pdb
 C:\Users\user\Source\Repos\oneYoga\oneYoga\obj\Debug\oneYoga.mainMenu.resources
 C:\Users\user\Source\Repos\oneYoga\oneYoga\obj\Debug\oneYoga.membersRegistration.resources
 C:\Users\user\Source\Repos\oneYoga\oneYoga\obj\Debug\oneYoga.classSchedule.resources
-C:\Users\user\Source\Repos\oneYoga\oneYoga\obj\Debug\oneYoga.vbprojResolveAssemblyReference.cache
 C:\Users\user\Source\Repos\oneYoga\oneYoga\obj\Debug\oneYoga.timePickerDialog.resources
 C:\Users\user\Source\Repos\oneYoga\oneYoga\obj\Debug\oneYoga.TimePickerStartDialog.resources
 C:\Users\user\Source\Repos\oneYoga\oneYoga\obj\Debug\oneYoga.Classes.resources
@@ -30,9 +29,14 @@ C:\Users\user\Source\Repos\oneYoga\oneYoga\bin\Debug\oneYoga.application
 C:\Users\user\Source\Repos\oneYoga\oneYoga\obj\Debug\oneYoga.exe.manifest
 C:\Users\user\Source\Repos\oneYoga\oneYoga\obj\Debug\oneYoga.application
 C:\Users\user\Source\Repos\oneYoga\oneYoga\obj\Debug\oneYoga.searchMembers.resources
-C:\Users\user\Source\Repos\oneYoga\oneYoga\obj\Debug\oneYoga.addNewRateForm.resources
 C:\Users\user\Source\Repos\oneYoga\oneYoga\obj\Debug\oneYoga.Enrolment.resources
 C:\Users\user\Source\Repos\oneYoga\oneYoga\obj\Debug\oneYoga.rates.resources
 C:\Users\user\Source\Repos\oneYoga\oneYoga\obj\Debug\oneYoga.selectTeacherForm.resources
 C:\Users\user\Source\Repos\oneYoga\oneYoga\obj\Debug\oneYoga.addNewTeacherForm.resources
 C:\Users\user\Source\Repos\oneYoga\oneYoga\obj\Debug\oneYoga.teachersMenuForm.resources
+C:\Users\user\Source\Repos\oneYoga\oneYoga\obj\Debug\oneYoga.addNewRateSessionForm.resources
+C:\Users\user\Source\Repos\oneYoga\oneYoga\obj\Debug\oneYoga.selectStudentToEnrollMenuForm.resources
+C:\Users\user\Source\Repos\oneYoga\oneYoga\obj\Debug\oneYoga.mainEnrolmentForm.resources
+C:\Users\user\Source\Repos\oneYoga\oneYoga\obj\Debug\oneYoga.selectClassToEnrollForm.resources
+C:\Users\user\Source\Repos\oneYoga\oneYoga\bin\Debug\oneYoga.exe.CodeAnalysisLog.xml
+C:\Users\user\Source\Repos\oneYoga\oneYoga\bin\Debug\oneYoga.exe.lastcodeanalysissucceeded
