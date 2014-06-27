@@ -29,6 +29,8 @@ Partial Class classSchedule
         Dim TimeStartLabel1 As System.Windows.Forms.Label
         Dim TeacherLabel As System.Windows.Forms.Label
         Me.IdTextBox = New System.Windows.Forms.TextBox()
+        Me.ClassScheduleBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.OYmembers = New oneYoga.OYmembers()
         Me.TimeEndTextBox = New System.Windows.Forms.TextBox()
         Me.TimeStartTextBox = New System.Windows.Forms.TextBox()
         Me.TimeEndDisplayTextBox = New System.Windows.Forms.TextBox()
@@ -46,21 +48,21 @@ Partial Class classSchedule
         Me.SaveButton = New System.Windows.Forms.Button()
         Me.CancelButtonAddNewClass = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.ClassScheduleBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.OYmembers = New oneYoga.OYmembers()
         Me.ClassScheduleTableAdapter = New oneYoga.OYmembersTableAdapters.classScheduleTableAdapter()
         Me.TableAdapterManager = New oneYoga.OYmembersTableAdapters.TableAdapterManager()
         Me.classComboBox = New System.Windows.Forms.ComboBox()
         Me.SubjectsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SubjectsTableAdapter = New oneYoga.OYmembersTableAdapters.subjectsTableAdapter()
+        Me.teacherNameTextBox = New System.Windows.Forms.TextBox()
+        Me.setTeacherButton = New System.Windows.Forms.Button()
         IdLabel = New System.Windows.Forms.Label()
         ClassLabel = New System.Windows.Forms.Label()
         TimeEndLabel = New System.Windows.Forms.Label()
         TimeStartLabel1 = New System.Windows.Forms.Label()
         TeacherLabel = New System.Windows.Forms.Label()
-        Me.DaysGroupBox.SuspendLayout()
         CType(Me.ClassScheduleBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.OYmembers, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.DaysGroupBox.SuspendLayout()
         CType(Me.SubjectsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -118,6 +120,16 @@ Partial Class classSchedule
         Me.IdTextBox.Size = New System.Drawing.Size(100, 20)
         Me.IdTextBox.TabIndex = 2
         '
+        'ClassScheduleBindingSource
+        '
+        Me.ClassScheduleBindingSource.DataMember = "classSchedule"
+        Me.ClassScheduleBindingSource.DataSource = Me.OYmembers
+        '
+        'OYmembers
+        '
+        Me.OYmembers.DataSetName = "OYmembers"
+        Me.OYmembers.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'TimeEndTextBox
         '
         Me.TimeEndTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassScheduleBindingSource, "timeEnd", True))
@@ -173,9 +185,11 @@ Partial Class classSchedule
         'TeacherTextBox
         '
         Me.TeacherTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassScheduleBindingSource, "teacher", True))
-        Me.TeacherTextBox.Location = New System.Drawing.Point(375, 104)
+        Me.TeacherTextBox.Enabled = False
+        Me.TeacherTextBox.Location = New System.Drawing.Point(381, 103)
         Me.TeacherTextBox.Name = "TeacherTextBox"
-        Me.TeacherTextBox.Size = New System.Drawing.Size(309, 20)
+        Me.TeacherTextBox.ReadOnly = True
+        Me.TeacherTextBox.Size = New System.Drawing.Size(30, 20)
         Me.TeacherTextBox.TabIndex = 16
         '
         'DaysGroupBox
@@ -281,16 +295,6 @@ Partial Class classSchedule
         Me.Label1.TabIndex = 20
         Me.Label1.Text = "Add New Class Schedule"
         '
-        'ClassScheduleBindingSource
-        '
-        Me.ClassScheduleBindingSource.DataMember = "classSchedule"
-        Me.ClassScheduleBindingSource.DataSource = Me.OYmembers
-        '
-        'OYmembers
-        '
-        Me.OYmembers.DataSetName = "OYmembers"
-        Me.OYmembers.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'ClassScheduleTableAdapter
         '
         Me.ClassScheduleTableAdapter.ClearBeforeFill = True
@@ -299,9 +303,13 @@ Partial Class classSchedule
         '
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.classScheduleTableAdapter = Me.ClassScheduleTableAdapter
+        Me.TableAdapterManager.gendersTableAdapter = Nothing
+        Me.TableAdapterManager.memberAccountTableAdapter = Nothing
         Me.TableAdapterManager.membersTableAdapter = Nothing
         Me.TableAdapterManager.otherYogaMedicationTableAdapter = Nothing
+        Me.TableAdapterManager.ratesTableAdapter = Nothing
         Me.TableAdapterManager.subjectsTableAdapter = Nothing
+        Me.TableAdapterManager.teachersTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = oneYoga.OYmembersTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.usersTableAdapter = Nothing
         '
@@ -326,11 +334,30 @@ Partial Class classSchedule
         '
         Me.SubjectsTableAdapter.ClearBeforeFill = True
         '
+        'teacherNameTextBox
+        '
+        Me.teacherNameTextBox.Location = New System.Drawing.Point(418, 102)
+        Me.teacherNameTextBox.Name = "teacherNameTextBox"
+        Me.teacherNameTextBox.ReadOnly = True
+        Me.teacherNameTextBox.Size = New System.Drawing.Size(165, 20)
+        Me.teacherNameTextBox.TabIndex = 22
+        '
+        'setTeacherButton
+        '
+        Me.setTeacherButton.Location = New System.Drawing.Point(589, 100)
+        Me.setTeacherButton.Name = "setTeacherButton"
+        Me.setTeacherButton.Size = New System.Drawing.Size(75, 23)
+        Me.setTeacherButton.TabIndex = 23
+        Me.setTeacherButton.Text = "Set"
+        Me.setTeacherButton.UseVisualStyleBackColor = True
+        '
         'classSchedule
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(718, 474)
+        Me.Controls.Add(Me.setTeacherButton)
+        Me.Controls.Add(Me.teacherNameTextBox)
         Me.Controls.Add(Me.classComboBox)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.CancelButtonAddNewClass)
@@ -352,9 +379,9 @@ Partial Class classSchedule
         Me.Name = "classSchedule"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "One Yoga - Add New Class Schedule"
-        Me.DaysGroupBox.ResumeLayout(False)
         CType(Me.ClassScheduleBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.OYmembers, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.DaysGroupBox.ResumeLayout(False)
         CType(Me.SubjectsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -385,4 +412,6 @@ Partial Class classSchedule
     Friend WithEvents classComboBox As System.Windows.Forms.ComboBox
     Friend WithEvents SubjectsBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents SubjectsTableAdapter As oneYoga.OYmembersTableAdapters.subjectsTableAdapter
+    Friend WithEvents teacherNameTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents setTeacherButton As System.Windows.Forms.Button
 End Class

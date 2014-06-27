@@ -30,7 +30,9 @@
     End Sub
 
     Private Sub TeachersButton_Click(sender As Object, e As EventArgs) Handles TeachersButton.Click
-        MsgBox("Feature Coming Soon!", 0, "One Yoga")
+        'MsgBox("Feature Coming Soon!", 0, "One Yoga")
+        Me.Enabled = False
+        teachersMenuForm.Show()
     End Sub
 
     Private Sub PaymentButton_Click(sender As Object, e As EventArgs) Handles PaymentButton.Click
@@ -52,4 +54,13 @@
         loginForm.UsernameTextBox.Focus()
     End Sub
 
+    Private Sub EnrollMenuButton_Click(sender As Object, e As EventArgs) Handles EnrollMenuButton.Click
+        MsgBox("Feature Coming Soon!", 0, "One Yoga")
+    End Sub
+
+    Private Sub RatesButton_Click(sender As Object, e As EventArgs) Handles RatesButton.Click
+        Me.Enabled = False
+        rates.Show()
+
+    End Sub
 End Class

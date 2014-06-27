@@ -14,6 +14,11 @@ Public Class classSchedule
         Classes.Enabled = True
     End Sub
 
+    Public Sub setTeacher(id As Integer, teacherName As String)
+        teacherNameTextBox.Text = teacherName
+        TeacherTextBox.Text = id
+    End Sub
+
     Private Sub classSchedule_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'OYmembers.subjects' table. You can move, or remove it, as needed.
         Me.SubjectsTableAdapter.Fill(Me.OYmembers.subjects)
@@ -91,5 +96,10 @@ Public Class classSchedule
     Private Sub CancelButtonAddNewClass_Click(sender As Object, e As EventArgs) Handles CancelButtonAddNewClass.Click
         Classes.Enabled = True
         Me.Close()
+    End Sub
+
+    Private Sub setTeacherButton_Click(sender As Object, e As EventArgs) Handles setTeacherButton.Click
+        Me.Enabled = False
+        selectTeacherForm.Show()
     End Sub
 End Class

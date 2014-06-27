@@ -23,16 +23,18 @@ Partial Class mainMenu
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.RegisterButton = New System.Windows.Forms.Button()
-        Me.ViewMembersButton = New System.Windows.Forms.Button()
-        Me.LogoutButton = New System.Windows.Forms.Button()
-        Me.SalesButton = New System.Windows.Forms.Button()
-        Me.TeachersButton = New System.Windows.Forms.Button()
-        Me.ClassScheduleButton = New System.Windows.Forms.Button()
-        Me.PaymentButton = New System.Windows.Forms.Button()
+        Me.EnrollMenuButton = New System.Windows.Forms.Button()
         Me.UsersButton = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PaymentButton = New System.Windows.Forms.Button()
+        Me.TeachersButton = New System.Windows.Forms.Button()
+        Me.SalesButton = New System.Windows.Forms.Button()
+        Me.ViewMembersButton = New System.Windows.Forms.Button()
+        Me.RegisterButton = New System.Windows.Forms.Button()
+        Me.ClassScheduleButton = New System.Windows.Forms.Button()
+        Me.LogoutButton = New System.Windows.Forms.Button()
         Me.nameLabel = New System.Windows.Forms.Label()
+        Me.RatesButton = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.TableLayoutPanel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -42,14 +44,16 @@ Partial Class mainMenu
         Me.TableLayoutPanel1.ColumnCount = 2
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Controls.Add(Me.UsersButton, 0, 3)
+        Me.TableLayoutPanel1.Controls.Add(Me.EnrollMenuButton, 1, 3)
         Me.TableLayoutPanel1.Controls.Add(Me.PaymentButton, 1, 2)
         Me.TableLayoutPanel1.Controls.Add(Me.TeachersButton, 0, 2)
         Me.TableLayoutPanel1.Controls.Add(Me.SalesButton, 1, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.ViewMembersButton, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.RegisterButton, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.ClassScheduleButton, 0, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.LogoutButton, 1, 3)
+        Me.TableLayoutPanel1.Controls.Add(Me.LogoutButton, 1, 4)
+        Me.TableLayoutPanel1.Controls.Add(Me.UsersButton, 0, 4)
+        Me.TableLayoutPanel1.Controls.Add(Me.RatesButton, 0, 3)
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(314, 33)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 6
@@ -62,77 +66,29 @@ Partial Class mainMenu
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(411, 302)
         Me.TableLayoutPanel1.TabIndex = 1
         '
-        'RegisterButton
+        'EnrollMenuButton
         '
-        Me.RegisterButton.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.EnrollMenuButton.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RegisterButton.Location = New System.Drawing.Point(3, 3)
-        Me.RegisterButton.Name = "RegisterButton"
-        Me.RegisterButton.Size = New System.Drawing.Size(199, 44)
-        Me.RegisterButton.TabIndex = 0
-        Me.RegisterButton.Text = "&Register Member"
-        Me.RegisterButton.UseVisualStyleBackColor = True
+        Me.EnrollMenuButton.Location = New System.Drawing.Point(208, 153)
+        Me.EnrollMenuButton.Name = "EnrollMenuButton"
+        Me.EnrollMenuButton.Size = New System.Drawing.Size(200, 44)
+        Me.EnrollMenuButton.TabIndex = 8
+        Me.EnrollMenuButton.Text = "&Enroll"
+        Me.EnrollMenuButton.UseVisualStyleBackColor = True
         '
-        'ViewMembersButton
+        'UsersButton
         '
-        Me.ViewMembersButton.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.UsersButton.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ViewMembersButton.Location = New System.Drawing.Point(208, 3)
-        Me.ViewMembersButton.Name = "ViewMembersButton"
-        Me.ViewMembersButton.Size = New System.Drawing.Size(200, 44)
-        Me.ViewMembersButton.TabIndex = 1
-        Me.ViewMembersButton.Text = "View Member"
-        Me.ViewMembersButton.UseVisualStyleBackColor = True
-        '
-        'LogoutButton
-        '
-        Me.LogoutButton.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.LogoutButton.Location = New System.Drawing.Point(208, 153)
-        Me.LogoutButton.Name = "LogoutButton"
-        Me.LogoutButton.Size = New System.Drawing.Size(200, 44)
-        Me.LogoutButton.TabIndex = 2
-        Me.LogoutButton.Text = "&Logout"
-        Me.LogoutButton.UseVisualStyleBackColor = True
-        '
-        'SalesButton
-        '
-        Me.SalesButton.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.SalesButton.Location = New System.Drawing.Point(208, 53)
-        Me.SalesButton.Name = "SalesButton"
-        Me.SalesButton.Size = New System.Drawing.Size(200, 44)
-        Me.SalesButton.TabIndex = 3
-        Me.SalesButton.Text = "&Sales"
-        Me.SalesButton.UseVisualStyleBackColor = True
-        '
-        'TeachersButton
-        '
-        Me.TeachersButton.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TeachersButton.Location = New System.Drawing.Point(3, 103)
-        Me.TeachersButton.Name = "TeachersButton"
-        Me.TeachersButton.Size = New System.Drawing.Size(199, 44)
-        Me.TeachersButton.TabIndex = 4
-        Me.TeachersButton.Text = "&Teachers"
-        Me.TeachersButton.UseVisualStyleBackColor = True
-        '
-        'ClassScheduleButton
-        '
-        Me.ClassScheduleButton.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ClassScheduleButton.Location = New System.Drawing.Point(3, 53)
-        Me.ClassScheduleButton.Name = "ClassScheduleButton"
-        Me.ClassScheduleButton.Size = New System.Drawing.Size(199, 44)
-        Me.ClassScheduleButton.TabIndex = 5
-        Me.ClassScheduleButton.Text = "&Class Schedule"
-        Me.ClassScheduleButton.UseVisualStyleBackColor = True
+        Me.UsersButton.Location = New System.Drawing.Point(3, 203)
+        Me.UsersButton.Name = "UsersButton"
+        Me.UsersButton.Size = New System.Drawing.Size(199, 44)
+        Me.UsersButton.TabIndex = 7
+        Me.UsersButton.Text = "&Users"
+        Me.UsersButton.UseVisualStyleBackColor = True
         '
         'PaymentButton
         '
@@ -146,17 +102,97 @@ Partial Class mainMenu
         Me.PaymentButton.Text = "&Payments"
         Me.PaymentButton.UseVisualStyleBackColor = True
         '
-        'UsersButton
+        'TeachersButton
         '
-        Me.UsersButton.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.TeachersButton.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.UsersButton.Location = New System.Drawing.Point(3, 153)
-        Me.UsersButton.Name = "UsersButton"
-        Me.UsersButton.Size = New System.Drawing.Size(199, 44)
-        Me.UsersButton.TabIndex = 7
-        Me.UsersButton.Text = "&Users"
-        Me.UsersButton.UseVisualStyleBackColor = True
+        Me.TeachersButton.Location = New System.Drawing.Point(3, 103)
+        Me.TeachersButton.Name = "TeachersButton"
+        Me.TeachersButton.Size = New System.Drawing.Size(199, 44)
+        Me.TeachersButton.TabIndex = 4
+        Me.TeachersButton.Text = "&Teachers"
+        Me.TeachersButton.UseVisualStyleBackColor = True
+        '
+        'SalesButton
+        '
+        Me.SalesButton.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.SalesButton.Location = New System.Drawing.Point(208, 53)
+        Me.SalesButton.Name = "SalesButton"
+        Me.SalesButton.Size = New System.Drawing.Size(200, 44)
+        Me.SalesButton.TabIndex = 3
+        Me.SalesButton.Text = "&Sales"
+        Me.SalesButton.UseVisualStyleBackColor = True
+        '
+        'ViewMembersButton
+        '
+        Me.ViewMembersButton.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ViewMembersButton.Location = New System.Drawing.Point(208, 3)
+        Me.ViewMembersButton.Name = "ViewMembersButton"
+        Me.ViewMembersButton.Size = New System.Drawing.Size(200, 44)
+        Me.ViewMembersButton.TabIndex = 1
+        Me.ViewMembersButton.Text = "View Member"
+        Me.ViewMembersButton.UseVisualStyleBackColor = True
+        '
+        'RegisterButton
+        '
+        Me.RegisterButton.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.RegisterButton.Location = New System.Drawing.Point(3, 3)
+        Me.RegisterButton.Name = "RegisterButton"
+        Me.RegisterButton.Size = New System.Drawing.Size(199, 44)
+        Me.RegisterButton.TabIndex = 0
+        Me.RegisterButton.Text = "&Register Member"
+        Me.RegisterButton.UseVisualStyleBackColor = True
+        '
+        'ClassScheduleButton
+        '
+        Me.ClassScheduleButton.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ClassScheduleButton.Location = New System.Drawing.Point(3, 53)
+        Me.ClassScheduleButton.Name = "ClassScheduleButton"
+        Me.ClassScheduleButton.Size = New System.Drawing.Size(199, 44)
+        Me.ClassScheduleButton.TabIndex = 5
+        Me.ClassScheduleButton.Text = "&Class Schedule"
+        Me.ClassScheduleButton.UseVisualStyleBackColor = True
+        '
+        'LogoutButton
+        '
+        Me.LogoutButton.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.LogoutButton.Location = New System.Drawing.Point(208, 203)
+        Me.LogoutButton.Name = "LogoutButton"
+        Me.LogoutButton.Size = New System.Drawing.Size(200, 44)
+        Me.LogoutButton.TabIndex = 2
+        Me.LogoutButton.Text = "&Logout"
+        Me.LogoutButton.UseVisualStyleBackColor = True
+        '
+        'nameLabel
+        '
+        Me.nameLabel.AutoSize = True
+        Me.nameLabel.Location = New System.Drawing.Point(32, 14)
+        Me.nameLabel.Name = "nameLabel"
+        Me.nameLabel.Size = New System.Drawing.Size(0, 13)
+        Me.nameLabel.TabIndex = 2
+        '
+        'RatesButton
+        '
+        Me.RatesButton.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.RatesButton.Location = New System.Drawing.Point(3, 153)
+        Me.RatesButton.Name = "RatesButton"
+        Me.RatesButton.Size = New System.Drawing.Size(199, 44)
+        Me.RatesButton.TabIndex = 9
+        Me.RatesButton.Text = "R&ates"
+        Me.RatesButton.UseVisualStyleBackColor = True
         '
         'PictureBox1
         '
@@ -167,14 +203,6 @@ Partial Class mainMenu
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
-        '
-        'nameLabel
-        '
-        Me.nameLabel.AutoSize = True
-        Me.nameLabel.Location = New System.Drawing.Point(32, 14)
-        Me.nameLabel.Name = "nameLabel"
-        Me.nameLabel.Size = New System.Drawing.Size(0, 13)
-        Me.nameLabel.TabIndex = 2
         '
         'mainMenu
         '
@@ -204,4 +232,6 @@ Partial Class mainMenu
     Friend WithEvents PaymentButton As System.Windows.Forms.Button
     Friend WithEvents UsersButton As System.Windows.Forms.Button
     Friend WithEvents nameLabel As System.Windows.Forms.Label
+    Friend WithEvents EnrollMenuButton As System.Windows.Forms.Button
+    Friend WithEvents RatesButton As System.Windows.Forms.Button
 End Class

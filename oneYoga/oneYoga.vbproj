@@ -106,6 +106,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addNewRateForm.Designer.vb">
+      <DependentUpon>addNewRateForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="addNewRateForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addNewTeacherForm.Designer.vb">
+      <DependentUpon>addNewTeacherForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="addNewTeacherForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AddSubjectForm.Designer.vb">
       <DependentUpon>AddSubjectForm.vb</DependentUpon>
     </Compile>
@@ -114,6 +126,12 @@
     </Compile>
     <Compile Include="ApplicationEvents.vb" />
     <Compile Include="CodeFile1.vb" />
+    <Compile Include="Enrolment.Designer.vb">
+      <DependentUpon>Enrolment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Enrolment.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="loginSplashScreen.Designer.vb">
       <DependentUpon>loginSplashScreen.vb</DependentUpon>
     </Compile>
@@ -166,6 +184,12 @@
     <Compile Include="My Project\results.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="My Project\selectTeacherForm.Designer.vb">
+      <DependentUpon>selectTeacherForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\selectTeacherForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\Settings.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -175,6 +199,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>OYmembers.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="rates.Designer.vb">
+      <DependentUpon>rates.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rates.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="searchMembers.Designer.vb">
       <DependentUpon>searchMembers.vb</DependentUpon>
@@ -186,6 +216,12 @@
       <DependentUpon>searchSubjects.vb</DependentUpon>
     </Compile>
     <Compile Include="searchSubjects.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="teachersMenuForm.Designer.vb">
+      <DependentUpon>teachersMenuForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="teachersMenuForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="timePickerDialog.Designer.vb">
@@ -202,8 +238,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="addNewRateForm.resx">
+      <DependentUpon>addNewRateForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addNewTeacherForm.resx">
+      <DependentUpon>addNewTeacherForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddSubjectForm.resx">
       <DependentUpon>AddSubjectForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Enrolment.resx">
+      <DependentUpon>Enrolment.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="loginSplashScreen.resx">
       <DependentUpon>loginSplashScreen.vb</DependentUpon>
@@ -232,11 +277,20 @@
     <EmbeddedResource Include="My Project\results.resx">
       <DependentUpon>results.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="My Project\selectTeacherForm.resx">
+      <DependentUpon>selectTeacherForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rates.resx">
+      <DependentUpon>rates.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="searchMembers.resx">
       <DependentUpon>searchMembers.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="searchSubjects.resx">
       <DependentUpon>searchSubjects.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="teachersMenuForm.resx">
+      <DependentUpon>teachersMenuForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="timePickerDialog.resx">
       <DependentUpon>timePickerDialog.vb</DependentUpon>

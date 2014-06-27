@@ -57,14 +57,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="oneYoga.exe" size="453632">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="oneYoga.exe" size="541696">
       <assemblyIdentity name="oneYoga" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>fl0rUvwZe1Zn5RziDi1ok8HwoijJz00C+1EhY2ev534=</dsig:DigestValue>
+        <dsig:DigestValue>NiD8xNKEEIGBVkhApgzKxp1CMwwBvjyccSv1Oe/E32I=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -74,7 +74,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>GGVfvywPsJcIRCMV5N/vKJciIbo9QYYDABTmWzIrSwk=</dsig:DigestValue>
+      <dsig:DigestValue>ggC524AcDmYrJasVlESGPPliEbbNMHt4yddZffgLXVA=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Database1_log.ldf" size="802816" writeableType="applicationData">
@@ -83,7 +83,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>KNpUvo4NbCT2uWLvM1EPJgCbjDjk/hn99gNSiL/kPRA=</dsig:DigestValue>
+      <dsig:DigestValue>MGd3aICQprnzdxdcYooMDsg+6CZqFfgR3B1GWYhX3o0=</dsig:DigestValue>
     </hash>
   </file>
   <file name="oneYoga.exe.config" size="1035">

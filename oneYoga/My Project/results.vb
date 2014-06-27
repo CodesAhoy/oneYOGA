@@ -4,19 +4,10 @@
     Public selectedID As Integer
 
     Private Sub results_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
-
-
-
+        mainMenu.Enabled = True
     End Sub
 
 
-
-    Private Sub MembersBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
-        Me.Validate()
-        Me.MembersBindingSource.EndEdit()
-        Me.TableAdapterManager.UpdateAll(Me.OYmembers)
-
-    End Sub
 
     Private Sub results_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'OYmembers.members' table. You can move, or remove it, as needed.

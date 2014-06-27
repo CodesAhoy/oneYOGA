@@ -30,3 +30,9 @@ C:\Users\user\Source\Repos\oneYoga\oneYoga\bin\Debug\oneYoga.application
 C:\Users\user\Source\Repos\oneYoga\oneYoga\obj\Debug\oneYoga.exe.manifest
 C:\Users\user\Source\Repos\oneYoga\oneYoga\obj\Debug\oneYoga.application
 C:\Users\user\Source\Repos\oneYoga\oneYoga\obj\Debug\oneYoga.searchMembers.resources
+C:\Users\user\Source\Repos\oneYoga\oneYoga\obj\Debug\oneYoga.addNewRateForm.resources
+C:\Users\user\Source\Repos\oneYoga\oneYoga\obj\Debug\oneYoga.Enrolment.resources
+C:\Users\user\Source\Repos\oneYoga\oneYoga\obj\Debug\oneYoga.rates.resources
+C:\Users\user\Source\Repos\oneYoga\oneYoga\obj\Debug\oneYoga.selectTeacherForm.resources
+C:\Users\user\Source\Repos\oneYoga\oneYoga\obj\Debug\oneYoga.addNewTeacherForm.resources
+C:\Users\user\Source\Repos\oneYoga\oneYoga\obj\Debug\oneYoga.teachersMenuForm.resources
